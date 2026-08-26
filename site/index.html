@@ -81,15 +81,13 @@ delivered before the goods.</span></pre>
   </div>
   <p class="punch">A caller reading the contract gets <code>response.is_prime → undefined</code>. HTTP 200, money settled, no error anywhere. Cost to find: $0.001.</p>
 
-  <div class="totals">
-    <table aria-label="Measurement totals"><tr>
-      <td><span class="n" id="t-attempts">46</span><span class="l">paid attempts</span></td>
-      <td><span class="n" id="t-delivered">33</span><span class="l">delivered (HTTP 200)</span></td>
-      <td><span class="n" id="t-checkable">29</span><span class="l">checkable vs contract</span></td>
-      <td><span class="n ok-n" id="t-conforms">19</span><span class="l">conforms · 65.5%</span></td>
-      <td><span class="n bad-n" id="t-violations">10</span><span class="l">violations · 34.5%</span></td>
-      <td><span class="n usdc-n">$1.292925</span><span class="l">settled, on-chain</span></td>
-    </tr></table>
+  <div class="totals" aria-label="Measurement totals">
+    <div class="cell"><span class="n">46</span><span class="l">paid attempts</span></div>
+    <div class="cell"><span class="n">33</span><span class="l">delivered, HTTP 200</span></div>
+    <div class="cell"><span class="n">29</span><span class="l">checkable vs contract</span></div>
+    <div class="cell"><span class="n ok-n">19</span><span class="l">conforms · 65.5%</span></div>
+    <div class="cell"><span class="n bad-n">10</span><span class="l">violations · 34.5%</span></div>
+    <div class="cell"><span class="n usdc-n">$1.292925</span><span class="l">settled, on-chain</span></div>
   </div>
   <p class="totals-cap">Base mainnet, 2026-08-26, 40 distinct hosts drawn from Coinbase's x402 discovery registry. Spend measured from the USDC Transfer log, never from quotes.</p>
 </section>

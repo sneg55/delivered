@@ -52,12 +52,13 @@ nav.top-nav a:hover{color:var(--usdc-deep)}
 .punch{font-family:var(--mono);font-size:14px;margin:18px 0 0;color:var(--ink-soft)}
 .punch code{background:var(--bad-bg);color:var(--bad);padding:2px 6px;border-radius:4px;font-weight:600}
 
-.totals{margin:56px 0 0;border:1px solid var(--hair);border-radius:8px;background:var(--frame);overflow-x:auto}
-.totals table{border-collapse:collapse;width:100%;min-width:640px;font-family:var(--mono);font-size:13.5px}
-.totals td{padding:13px 18px;border-right:1px dashed var(--hair);white-space:nowrap}
-.totals td:last-child{border-right:0}
-.totals .n{display:block;font-size:22px;font-weight:600;letter-spacing:-.01em}
-.totals .l{display:block;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--mute);margin-top:2px}
+.totals{margin:56px 0 0;border:1px solid var(--hair);border-radius:8px;background:var(--frame);display:grid;grid-template-columns:repeat(6,1fr);font-family:var(--mono)}
+.totals .cell{padding:14px 16px;border-right:1px dashed var(--hair)}
+.totals .cell:last-child{border-right:0}
+@media(max-width:940px){.totals{grid-template-columns:repeat(3,1fr)}.totals .cell:nth-child(3){border-right:0}.totals .cell:nth-child(-n+3){border-bottom:1px dashed var(--hair)}}
+@media(max-width:520px){.totals{grid-template-columns:repeat(2,1fr)}.totals .cell{border-right:0}.totals .cell:nth-child(odd){border-right:1px dashed var(--hair)}.totals .cell:nth-child(-n+4){border-bottom:1px dashed var(--hair)}}
+.totals .n{display:block;font-size:clamp(17px,1.9vw,22px);font-weight:600;letter-spacing:-.01em}
+.totals .l{display:block;font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--mute);margin-top:3px}
 .totals .ok-n{color:var(--ok)}.totals .bad-n{color:var(--bad)}.totals .usdc-n{color:var(--usdc-deep)}
 .totals-cap{font-size:13px;color:var(--mute);padding:10px 2px}
 
