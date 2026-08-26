@@ -14,7 +14,9 @@
     "registry-shape": "node src/schema-shape.mjs",
     "network-split": "node src/network-format.mjs",
     "reconcile": "node src/reconcile.mjs",
-    "backfill-payto": "node src/backfill-payto.mjs"
+    "backfill-payto": "node src/backfill-payto.mjs",
+    "site:data": "node -e \"const r=require('./evidence/results.json');const s=r.map(x=>({url:x.url,verdict:x.verdict,httpStatus:x.httpStatus??null,livePrice:x.livePrice??null,listedPrice:x.listedPrice??null,settledAmount:x.settledAmount??null,settlementTx:x.settlementTx??null,contractKind:x.contractKind??null,declaredFields:x.declaredFields??[],detail:x.detail??null,nesting:x.nesting??null,extraKeys:x.extraKeys??[],x402Version:x.x402Version??null,retried:Boolean(x.previousAttempt),settlementAttribution:x.settlementAttribution??null,body:typeof x.body==='object'?JSON.stringify(x.body).slice(0,400):String(x.body??'').slice(0,400)}));require('fs').writeFileSync('site/data.json',JSON.stringify(s))\"",
+    "site:deploy": "npm run site:data && mkdir -p site/evidence && cp evidence/results.json evidence/orion-gateway-2026-08-26.json site/evidence/ && wrangler pages deploy site --project-name delivered --branch main --commit-dirty=true"
   },
   "dependencies": {
     "viem": "2.55.19"
