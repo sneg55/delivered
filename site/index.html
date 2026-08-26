@@ -81,8 +81,8 @@ delivered before the goods.</span></pre>
   </div>
   <p class="punch">A caller reading the contract gets <code>response.is_prime → undefined</code>. HTTP 200, money settled, no error anywhere. Cost to find: $0.001.</p>
 
-  <div class="totals" role="table" aria-label="Measurement totals">
-    <table><tr>
+  <div class="totals">
+    <table aria-label="Measurement totals"><tr>
       <td><span class="n" id="t-attempts">46</span><span class="l">paid attempts</span></td>
       <td><span class="n" id="t-delivered">33</span><span class="l">delivered (HTTP 200)</span></td>
       <td><span class="n" id="t-checkable">29</span><span class="l">checkable vs contract</span></td>
@@ -95,7 +95,6 @@ delivered before the goods.</span></pre>
 </section>
 
 <section id="ledger">
-  <p class="eyebrow">The ledger</p>
   <h2>Every probe, with its receipt</h2>
   <p class="sec-lede">Each row expands to the seller's declared contract, what came back, what was quoted
   against what actually settled, and the settlement transaction on Basescan. Verdicts follow one rule:
@@ -106,40 +105,38 @@ delivered before the goods.</span></pre>
 </section>
 
 <section id="findings">
-  <p class="eyebrow">What the money found</p>
   <h2>Four findings, all paid for</h2>
   <div class="findings">
-    <div class="finding"><span class="tag VIOLATION">VIOLATION</span>
-      <h3>9 of 10 violations are the same bug</h3>
+    <article class="finding"><span class="tag VIOLATION">VIOLATION</span>
+      <div><h3>9 of 10 violations are the same bug</h3>
       <p>The promised fields exist, nested under a wrapper envelope like <code>{tool_name, result}</code>.
       A caller reading the declared path gets <code>undefined</code> while correct data sits one level
       down. A contract violation, not fraud, and invisible to every tool that stops at the paywall.</p>
-    </div>
-    <div class="finding"><span class="tag VIOLATION">PAID, NOT DELIVERED</span>
-      <h3>Two endpoints settled and returned nothing</h3>
+    </div></article>
+    <article class="finding"><span class="tag VIOLATION">PAID, NOT DELIVERED</span>
+      <div><h3>Two endpoints settled and returned nothing</h3>
       <p>One took <a href="https://basescan.org/tx/0x7bad35035f575f00f5a6504436d680c2ab795c77b33327256ed722077c2dd632">$0.100 with a settlement receipt</a>,
       then answered HTTP 422. Another settled $0.001 and answered HTTP 500. The money moved and nothing
       came back, with no recovery path in the protocol. Other sellers hit with the same bad input refused
       without charging, so the correct behaviour exists. It is not universal.</p>
-    </div>
-    <div class="finding"><span class="tag UNCHECKABLE">CLIENT SIDE</span>
-      <h3>The buyer's toolchain is broken too</h3>
+    </div></article>
+    <article class="finding"><span class="tag UNCHECKABLE">CLIENT SIDE</span>
+      <div><h3>The buyer's toolchain is broken too</h3>
       <p>The official <code>x402-fetch</code> cannot pay v2 sellers at all. A v2 payload under the legacy
       <code>X-PAYMENT</code> header is rejected by 13 of 46. Sending both header names reaches all but
       one. Three runs, three interop states, each discovered with real money and reproduced in the
       measurement log.</p>
-    </div>
-    <div class="finding"><span class="tag CONFORMS">QUOTES</span>
-      <h3>What you are charged is not what you were quoted</h3>
+    </div></article>
+    <article class="finding"><span class="tag CONFORMS">QUOTES</span>
+      <div><h3>What you are charged is not what you were quoted</h3>
       <p>Settled amounts drift from listed prices, and some sellers deliver and charge nothing, so a
       ledger built from quoted prices does not reconcile against the wallet. Delivered records quoted,
       live, and settled amounts as three separate fields and trusts only the transfer log.</p>
-    </div>
+    </div></article>
   </div>
 </section>
 
 <section id="sponsor">
-  <p class="eyebrow">No exceptions</p>
   <h2>The sponsor's gateway, measured like any other seller</h2>
   <div class="orion">
     <p>Orion Agents runs an x402 reputation gateway with a discount for attested agents
@@ -160,7 +157,6 @@ delivered before the goods.</span></pre>
 </section>
 
 <section id="verify" class="verify">
-  <p class="eyebrow">Trust nothing here</p>
   <h2>Reproduce it yourself</h2>
   <p class="sec-lede">The prober, the conformance checker, and the reconciliation are open source. The
   unpaid tier runs from a fresh clone with no wallet and no money at risk.</p>
