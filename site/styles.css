@@ -107,10 +107,6 @@ h2{text-wrap:balance;font-family:var(--disp);font-weight:800;font-stretch:97%;fo
 .finding p code{font-family:var(--mono);font-size:12.5px;background:var(--mute-bg);padding:1px 5px;border-radius:3px}
 .finding p a{white-space:nowrap}
 
-.orion{border:1px solid var(--hair);border-left:4px solid var(--usdc);border-radius:8px;background:var(--frame);padding:22px 24px;max-width:850px}
-.orion p{font-size:14.5px;color:var(--ink-soft);margin-top:8px}
-.orion ul{margin:10px 0 0 18px;font-size:14.5px;color:var(--ink-soft);display:grid;gap:6px}
-.orion code{font-family:var(--mono);font-size:12.5px;background:var(--mute-bg);padding:1px 5px;border-radius:3px}
 
 .verify pre{background:var(--ink);color:#E8EAED;border-radius:8px;padding:20px 22px;font-family:var(--mono);font-size:13px;line-height:1.8;overflow-x:auto}
 .verify pre .cm{color:#7C8590}

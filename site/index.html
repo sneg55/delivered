@@ -24,7 +24,6 @@
     <nav class="top-nav">
       <a href="#ledger">Ledger</a>
       <a href="#findings">Findings</a>
-      <a href="#sponsor">Sponsor gateway</a>
       <a href="#verify">Verify it</a>
       <a href="https://github.com/sneg55/delivered">GitHub</a>
     </nav>
@@ -131,26 +130,6 @@ delivered before the goods.</span></pre>
       ledger built from quoted prices does not reconcile against the wallet. Delivered records quoted,
       live, and settled amounts as three separate fields and trusts only the transfer log.</p>
     </div></article>
-  </div>
-</section>
-
-<section id="sponsor">
-  <h2>The sponsor's gateway, measured like any other seller</h2>
-  <div class="orion">
-    <p>Orion Agents runs an x402 reputation gateway with a discount for attested agents
-    (<code>X-ORION-ATTESTATION</code>, $0.05 standard, $0.02 attested). Delivered probed it the way it
-    probes everyone, on 2026-08-26:</p>
-    <ul>
-      <li>The attestation endpoint returned <em>not found</em> for every key that exists, including all
-      three agents minted and attested on-chain in the <code>AgentBound</code> contract, so the
-      discounted rate was unobtainable by any caller that day.</li>
-      <li>The premium endpoint accepted a valid v2 payment and answered HTTP 500, under both accepted
-      header names.</li>
-      <li>It charged nothing either time, verified against the transfer log. Correct refusal behaviour,
-      credited as such.</li>
-    </ul>
-    <p>Delivered reports the mismatch and makes no accusation. Full evidence in
-    <a href="https://github.com/sneg55/delivered/blob/main/evidence/orion-gateway-2026-08-26.json">evidence/orion-gateway-2026-08-26.json</a>.</p>
   </div>
 </section>
 
