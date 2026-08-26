@@ -1,5 +1,11 @@
 # Delivered
 
+[![tests](https://github.com/sneg55/delivered/actions/workflows/test.yml/badge.svg)](https://github.com/sneg55/delivered/actions/workflows/test.yml)
+[![evidence ledger](https://img.shields.io/badge/evidence-delivered--f0d.pages.dev-2775CA)](https://delivered-f0d.pages.dev)
+[![network](https://img.shields.io/badge/network-Base%20mainnet-0052FF)](https://basescan.org/address/0xc3Dd3dEe328831fe12F259Fa20725c2Ce312BF3D)
+[![settled on-chain](https://img.shields.io/badge/settled%20on--chain-%241.292925-101418)](docs/PAID-PROOF.md)
+[![x402](https://img.shields.io/badge/x402-v1%20%2B%20v2-666C75)](https://github.com/coinbase/x402)
+
 Caller-observed delivery proof for paid x402 endpoints.
 
 Everyone else measures the endpoint before the money moves. Delivered measures the goods after.
