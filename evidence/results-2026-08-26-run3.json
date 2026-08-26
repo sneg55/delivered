@@ -1,0 +1,1436 @@
+[
+ {
+  "url": "https://api.glianalabs.com/x402/gemini-3.5-flash-lite",
+  "listedPrice": 0.003334,
+  "livePrice": 0.003334,
+  "drift": false,
+  "payTo": "0x7662E00f8Ab4C362166e1FF649Ff6c2A638c80AD",
+  "quotedAtomic": "3334",
+  "x402Version": 1,
+  "contractKind": "registry example object",
+  "declaredFields": [
+   "model:string",
+   "output:object"
+  ],
+  "charged": 0,
+  "quotedVsCharged": "QUOTED $0.003334, CHARGED NOTHING",
+  "payloadVersion": 1,
+  "httpStatus": 402,
+  "bytes": 1220,
+  "delivered": false,
+  "settled": false,
+  "receiptState": "NO RECEIPT HEADER",
+  "txHash": null,
+  "verdict": "PAYMENT_REJECTED",
+  "detail": "paid request was re-challenged with 402; no delivery observed, and this is a client fault until proven otherwise",
+  "extraKeys": [],
+  "semantic": null,
+  "nesting": null,
+  "body": {
+   "x402Version": 1,
+   "error": "Cannot read properties of undefined (reading 'scheme')",
+   "accepts": [
+    {
+     "scheme": "exact",
+     "network": "base",
+     "maxAmountRequired": "3334",
+     "resource": "https://api.glianalabs.com/x402/gemini-3.5-flash-lite",
+     "description": "GlianaAI - pay-per-call AI: LLM chat (OpenAI-compatible), image, video, music, speech - 90+ models, no signup, USDC. This resource: gemini-3.5-flash-lite (Text Generation). https://ai.glianalabs.com",
+     "mimeType": "application/json",
+     "payTo": "0x7662E00f8Ab4C362166e1FF649Ff6c2A638c80AD",
+     "maxTimeoutSeconds": 300,
+     "asset": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+     "extra": {
+      "name": "USD Coin",
+      "version": "2"
+     }
+    },
+    {
+     "scheme": "exact",
+     "network": "solana",
+     "maxAmountRequired": "3334",
+     "resource": "https://api.glianalabs.com/x402/gemini-3.5-flash-lite",
+     "description": "GlianaAI - pay-per-call AI: LLM chat (OpenAI-compatible), image, video, music, speech - 90+ models, no signup, USDC. This resource: gemini-3.5-flash-lite (Text Generation). https://ai.glianalabs.com",
+     "mimeType": "application/json",
+     "payTo": "CXSdm7NgrFXooHbvN6CdNgMvmqTkVLzu6JCVZR3J3Ygh",
+     "maxTimeoutSeconds": 300,
+     "asset": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+     "extra": {
+      "feePayer": "BENrLoUbndxoNMUS5JXApGMtNykLjFXXixMtpDwDR9SP"
+     }
+    }
+   ]
+  },
+  "settledAmount": 0,
+  "settlementAttribution": "no settlement for this payee and amount in the window"
+ },
+ {
+  "url": "https://api.magentlab.com/api/calc/killip",
+  "listedPrice": 0.005,
+  "livePrice": 0.007,
+  "drift": true,
+  "payTo": "0x836Be278f1739fB4308091cD1852F7971Bc19Ee2",
+  "quotedAtomic": "7000",
+  "x402Version": 2,
+  "contractKind": "registry example object",
+  "declaredFields": [
+   "count:number",
+   "items:array",
+   "path:string"
+  ],
+  "charged": 0.007,
+  "quotedVsCharged": "QUOTED $0.007, CHARGED NOTHING",
+  "payloadVersion": 2,
+  "httpStatus": 200,
+  "bytes": 1667,
+  "delivered": true,
+  "settled": true,
+  "receiptState": "receipt returned",
+  "txHash": "0x2cf16ee2131f6e18f75f5102e5d112bb319f55aa48f3c0a0cc9cd20deff27933",
+  "verdict": "CONFORMS",
+  "detail": "3 declared field(s) present, types match",
+  "extraKeys": [],
+  "semantic": null,
+  "nesting": null,
+  "body": {
+   "count": 2,
+   "path": "/api/calc/killip",
+   "items": [
+    {
+     "description": "No heart failure",
+     "components": [
+      {
+       "factor": "killip_class",
+       "points": 1,
+       "present": true
+      }
+     ],
+     "disclaimer": "Not a medical device. Deterministic published-formula or published-code output for autonomous agents. A licensed clinician remains responsible for patient care and billing submissions.",
+     "citation": {
+      "authors": "Killip T 3rd, Kimball JT",
+      "doi": "10.1016/0002-9149(67)90023-9",
+      "id": "killip-1967",
+      "pmid": "6059183",
+      "source": "Am J Cardiol. 1967;20(4):457-464",
+      "title": "Treatment of myocardial infarction in a coronary care unit. A two year experience with 250 patients"
+     },
+     "formula": "killip",
+     "formula_expression": "Killip class 1-4 as assigned by the caller; 1967 CCU hospital mortality 6/17/38/81 percent (Killip and Kimball 1967)",
+     "max_score": 4,
+     "score": 1,
+     "hospital_mortality_percent": 6,
+     "killip_class": 1
+    },
+    {
+     "description": "No heart failure",
+     "components": [
+      {
+       "factor": "killip_class",
+       "points": 1,
+       "present": true
+      }
+     ],
+     "disclaimer": "Not a medical device. Deterministic published-formula or published-code output for autonomous agents. A licensed clinician remains responsible for patient care and billing submissions.",
+     "citation": {
+      "authors": "Killip T 3rd, Kimball JT",
+      "doi": "10.1016/0002-9149(67)90023-9",
+      "id": "killip-1967",
+      "pmid": "6059183",
+      "source": "Am J Cardiol. 1967;20(4):457-464",
+      "title": "Treatment of myocardial infarction in a coronary care unit. A two year experience with 250 patients"
+     },
+     "formula": "killip",
+     "formula_expression": "Killip class 1-4 as assigned by the caller; 1967 CCU hospital mortality 6/17/38/81 percent (Killip and Kimball 1967)",
+     "max_score": 4,
+     "score": 1,
+     "hospital_mortality_percent": 6,
+     "killip_class": 1
+    }
+   ]
+  },
+  "settledAmount": 0.007,
+  "settlementTx": "0x2cf16ee2131f6e18f75f5102e5d112bb319f55aa48f3c0a0cc9cd20deff27933",
+  "settlementBlock": 50484227,
+  "settlementAttribution": "group-complete: 2 settlements for 2 endpoint(s) at this payee and price, so every one was charged; which tx belongs to which endpoint is arbitrary"
+ },
+ {
+  "url": "https://api.magentlab.com/api/calc/pf_ratio",
+  "listedPrice": 0.005,
+  "livePrice": 0.007,
+  "drift": true,
+  "payTo": "0x836Be278f1739fB4308091cD1852F7971Bc19Ee2",
+  "quotedAtomic": "7000",
+  "x402Version": 2,
+  "contractKind": "registry example object",
+  "declaredFields": [
+   "count:number",
+   "items:array",
+   "path:string"
+  ],
+  "charged": 0.007,
+  "quotedVsCharged": "QUOTED $0.007, CHARGED NOTHING",
+  "payloadVersion": 2,
+  "httpStatus": 200,
+  "bytes": 1119,
+  "delivered": true,
+  "settled": true,
+  "receiptState": "receipt returned",
+  "txHash": "0xb862987644dee86a4501dfefd201ad6c0681b3b11bb0a27fb1e2e3437b2adcfa",
+  "verdict": "CONFORMS",
+  "detail": "3 declared field(s) present, types match",
+  "extraKeys": [],
+  "semantic": null,
+  "nesting": null,
+  "body": {
+   "count": 2,
+   "path": "/api/calc/pf_ratio",
+   "items": [
+    {
+     "disclaimer": "Not a medical device. Deterministic published-formula or published-code output for autonomous agents. A licensed clinician remains responsible for patient care and billing submissions.",
+     "citation": {
+      "authors": "Horovitz JH, Carrico CJ, Shires GT",
+      "doi": "10.1001/archsurg.1974.01350270079014",
+      "id": "horovitz-1974",
+      "source": "Arch Surg. 1974;108(3):349-355",
+      "title": "Pulmonary response to major injury"
+     },
+     "formula": "pf_ratio",
+     "formula_expression": "pf_ratio = pao2_mm_hg / fio2",
+     "fio2": 0.21,
+     "pao2_mm_hg": 95,
+     "pf_ratio": 452.4
+    },
+    {
+     "disclaimer": "Not a medical device. Deterministic published-formula or published-code output for autonomous agents. A licensed clinician remains responsible for patient care and billing submissions.",
+     "citation": {
+      "authors": "Horovitz JH, Carrico CJ, Shires GT",
+      "doi": "10.1001/archsurg.1974.01350270079014",
+      "id": "horovitz-1974",
+      "source": "Arch Surg. 1974;108(3):349-355",
+      "title": "Pulmonary response to major injury"
+     },
+     "formula": "pf_ratio",
+     "formula_expression": "pf_ratio = pao2_mm_hg / fio2",
+     "fio2": 0.21,
+     "pao2_mm_hg": 95,
+     "pf_ratio": 452.4
+    }
+   ]
+  },
+  "settledAmount": 0.007,
+  "settlementTx": "0xb862987644dee86a4501dfefd201ad6c0681b3b11bb0a27fb1e2e3437b2adcfa",
+  "settlementBlock": 50484228,
+  "settlementAttribution": "group-complete: 2 settlements for 2 endpoint(s) at this payee and price, so every one was charged; which tx belongs to which endpoint is arbitrary"
+ },
+ {
+  "url": "https://api.invoket.com/weather/forecast",
+  "listedPrice": 0.01,
+  "livePrice": 0.01,
+  "drift": false,
+  "payTo": "0x4465825B0ac713aA2Fa07Ea29023020804A128ee",
+  "quotedAtomic": "10000",
+  "x402Version": 2,
+  "contractKind": "registry example object",
+  "declaredFields": [
+   "data:object",
+   "provenance:object"
+  ],
+  "charged": 0,
+  "quotedVsCharged": "QUOTED $0.01, CHARGED NOTHING",
+  "payloadVersion": 2,
+  "httpStatus": 400,
+  "bytes": 572,
+  "delivered": false,
+  "settled": false,
+  "receiptState": "NO RECEIPT HEADER",
+  "txHash": null,
+  "verdict": "NOT_DELIVERED",
+  "detail": "seller returned HTTP 400; no delivery to check against the contract",
+  "extraKeys": [],
+  "semantic": null,
+  "nesting": null,
+  "body": {
+   "code": "INVALID_COORDS",
+   "error": "a point is required: provide lat/lon coordinates, or a place name via 'city' (alias 'location'), optionally narrowed by 'country' (ISO-3166 alpha-2). Accepted parameters: lat+lon, or city (alias 'location', with optional 'country' ISO-3166 alpha-2); at most one of valid_time (RFC 3339), horizon_h (integer hours) or date (YYYY-MM-DD, served at 12:00 UTC) — omitted = current analysis time; optional variables (temperature, precipitation, wind, convective, humidity, clouds, snow). Example: /weather/forecast?city=Zurich&date=2026-07-05"
+  },
+  "settledAmount": 0,
+  "settlementAttribution": "no settlement for this payee and amount in the window"
+ },
+ {
+  "url": "https://api.printmoneylab.com/api/v1/exchange-alerts",
+  "listedPrice": 0.01,
+  "livePrice": 0.01,
+  "drift": false,
+  "payTo": "0xcF9223eCe895258dEa8D288AEBcf846Ab8E342fB",
+  "quotedAtomic": "10000",
+  "x402Version": 2,
+  "contractKind": "registry example object",
+  "declaredFields": [
+   "caution_tokens:array",
+   "listing_changes:array",
+   "meta:object"
+  ],
+  "charged": 0.01,
+  "quotedVsCharged": "QUOTED $0.01, CHARGED NOTHING",
+  "payloadVersion": 2,
+  "httpStatus": 200,
+  "bytes": 2475,
+  "delivered": true,
+  "settled": true,
+  "receiptState": "receipt returned",
+  "txHash": "0x05678e00292af9028b2610f5f9bb3e196c6875fd41514af4fc50dc42c92b5922",
+  "verdict": "CONFORMS",
+  "detail": "3 declared field(s) present, types match",
+  "extraKeys": [
+   "last_update",
+   "receipt"
+  ],
+  "semantic": null,
+  "nesting": null,
+  "body": {
+   "listing_changes": [],
+   "caution_tokens": [
+    {
+     "symbol": "PUNDIX",
+     "korean_name": "펀디엑스",
+     "flags": [
+      "VOLUME_SOARING"
+     ]
+    },
+    {
+     "symbol": "META2",
+     "korean_name": "메타다오",
+     "flags": [
+      "VOLUME_SOARING",
+      "DEPOSIT_SOARING"
+     ]
+    },
+    {
+     "symbol": "ALGO",
+     "korean_name": "알고랜드",
+     "flags": [
+      "DEPOSIT_SOARING"
+     ]
+    },
+    {
+     "symbol": "KMNO",
+     "korean_name": "카미노파이낸스",
+     "flags": [
+      "VOLUME_SOARING",
+      "DEPOSIT_SOARING"
+     ]
+    },
+    {
+     "symbol": "BONK",
+     "korean_name": "봉크",
+     "flags": [
+      "INVESTMENT_WARNING"
+     ]
+    },
+    {
+     "symbol": "RVN",
+     "korean_name": "레이븐코인",
+     "flags": [
+      "INVESTMENT_WARNING",
+      "GLOBAL_PRICE_DIFF"
+     ]
+    },
+    {
+     "symbol": "MANTRA",
+     "korean_name": "만트라",
+     "flags": [
+      "INVESTMENT_WARNING"
+     ]
+    },
+    {
+     "symbol": "SAND",
+     "korean_name": "샌드박스",
+     "flags": [
+      "INVESTMENT_WARNING",
+      "GLOBAL_PRICE_DIFF"
+     ]
+    },
+    {
+     "symbol": "TT",
+     "korean_name": "썬더코어",
+     "flags": [
+      "INVESTMENT_WARNING",
+      "GLOBAL_PRICE_DIFF"
+     ]
+    },
+    {
+     "symbol": "STORJ",
+     "korean_name": "스토리지",
+     "flags": [
+      "INVESTMENT_WARNING"
+     ]
+    },
+    {
+     "symbol": "GRT",
+     "korean_name": "더그래프",
+     "flags": [
+      "DEPOSIT_SOARING"
+     ]
+    },
+    {
+     "symbol": "ZRO",
+     "korean_name": "레이어제로",
+     "flags": [
+      "VOLUME_SOARING",
+      "DEPOSIT_SOARING"
+     ]
+    },
+    {
+     "symbol": "RAY",
+     "korean_name": "레이디움",
+     "flags": [
+      "VOLUME_SOARING"
+     ]
+    },
+    {
+     "symbol": "GMT",
+     "korean_name": "스테픈",
+     "flags": [
+      "VOLUME_SOARING",
+      "DEPOSIT_SOARING"
+     ]
+    },
+    {
+     "symbol": "SPX",
+     "korean_name": "에스피엑스6900",
+     "flags": [
+      "VOLUME_SOARING",
+      "DEPOSIT_SOARING"
+     ]
+    },
+    {
+     "symbol": "MEW",
+     "korean_name": "캣인어독스월드",
+     "flags": [
+      "VOLUME_SOARING",
+      "DEPOSIT_SOARING"
+     ]
+    },
+    {
+     "symbol": "SLX",
+     "korean_name": "솔스티스",
+     "flags": [
+      "VOLUME_SOARING"
+     ]
+    },
+    {
+     "symbol": "SNT",
+     "korean_name": "스테이터스네트워크토큰",
+     "flags": [
+      "VOLUME_SOARING"
+     ]
+    },
+    {
+     "symbol": "ZIL",
+     "korean_name": "질리카",
+     "flags": [
+      "INVESTMENT_WARNING",
+      "GLOBAL_PRICE_DIFF"
+     ]
+    },
+    {
+     "symbol": "HOLO",
+     "korean_name": "홀로월드에이아이",
+     "flags": [
+      "DEPOSIT_SOARING"
+     ]
+    },
+    {
+     "symbol": "ONG",
+     "korean_name": "온톨로지가스",
+     "flags": [
+      "GLOBAL_PRICE_DIFF"
+     ]
+    }
+   ],
+   "last_update": 1787757794.265044,
+   "meta": {
+    "price": "$0.01",
+    "update_interval": "60s"
+   },
+   "receipt": {
+    "id": "rcpt_20260826_f100b0",
+    "issued_at": "2026-08-26T15:23:33.499Z",
+    "endpoint": "/api/v1/exchange-alerts",
+    "amount": "0.01",
+    "currency": "USDC",
+    "network": "eip155:8453",
+    "tx_hash": "0x05678e00292af9028b2610f5f9bb3e196c6875fd41514af4fc50dc42c92b5922",
+    "payer": "0xc3Dd3dEe328831fe12F259Fa20725c2Ce312BF3D",
+    "merchant": "0xcF9223eCe895258dEa8D288AEBcf846Ab8E342fB",
+    "signature": "0x807b078dc8e5ba0c76bdea2fdd3ac696590800998eb549df179c2d3e98a1de036bd04928a6b32392313d55d3d84cea92a77ab7ea7eed78acdf955f1427a7632e1b",
+    "signer": "0x1AdF0f9e576E94a150208F08D2C31F791932E781"
+   }
+  },
+  "settledAmount": 0.01,
+  "settlementTx": "0x05678e00292af9028b2610f5f9bb3e196c6875fd41514af4fc50dc42c92b5922",
+  "settlementBlock": 50484234,
+  "settlementAttribution": "exact"
+ },
+ {
+  "url": "https://api.myceliasignal.com/oracle/price/eur/usd",
+  "listedPrice": 0.01,
+  "livePrice": 0.01,
+  "drift": false,
+  "payTo": "0xD593832Ce9C2B13B192ba50B55dd9AF44e96700d",
+  "quotedAtomic": "10000",
+  "x402Version": 2,
+  "contractKind": "registry example object",
+  "declaredFields": [
+   "canonical:string",
+   "domain:string",
+   "pubkey:string",
+   "signature:string",
+   "signingScheme:string"
+  ],
+  "charged": 0.01,
+  "quotedVsCharged": "QUOTED $0.01, CHARGED NOTHING",
+  "payloadVersion": 2,
+  "httpStatus": 200,
+  "bytes": 388,
+  "delivered": true,
+  "settled": true,
+  "receiptState": "receipt returned",
+  "txHash": "0x40cfff31023dd70f54a2b20747f1ae4e4f126f8b55f031fa684154f02306b43e",
+  "verdict": "CONFORMS",
+  "detail": "5 declared field(s) present, types match",
+  "extraKeys": [],
+  "semantic": null,
+  "nesting": null,
+  "body": {
+   "canonical": "v1|PRICE|EURUSD|1.17|USD|2|bankofcanada,bitstamp,cnb,ecb,ecbdirect,kraken,norgesbank|median|1787757816|365770",
+   "domain": "EURUSD",
+   "pubkey": "f4f0e52b5f7b54831f965632bf1ebf72769beda4c4e3d36a593f7729ec812615",
+   "signature": "af7b4338895d507110569adf608aae80c38e1e59360962e613964f639202f497f3ed864be2378d63aa21ec52740c67e49ca4a9d35cc3c104a874a7161f35e20b",
+   "signingScheme": "ed25519"
+  },
+  "settledAmount": 0.01,
+  "settlementTx": "0x40cfff31023dd70f54a2b20747f1ae4e4f126f8b55f031fa684154f02306b43e",
+  "settlementBlock": 50484236,
+  "settlementAttribution": "group-complete: 2 settlements for 2 endpoint(s) at this payee and price, so every one was charged; which tx belongs to which endpoint is arbitrary"
+ },
+ {
+  "url": "https://api.myceliasignal.com/oracle/price/cad/jpy",
+  "listedPrice": 0.01,
+  "livePrice": 0.01,
+  "drift": false,
+  "payTo": "0xD593832Ce9C2B13B192ba50B55dd9AF44e96700d",
+  "quotedAtomic": "10000",
+  "x402Version": 2,
+  "contractKind": "registry example object",
+  "declaredFields": [
+   "canonical:string",
+   "domain:string",
+   "pubkey:string",
+   "signature:string",
+   "signingScheme:string"
+  ],
+  "charged": 0.01,
+  "quotedVsCharged": "matches quote",
+  "payloadVersion": 2,
+  "httpStatus": 200,
+  "bytes": 365,
+  "delivered": true,
+  "settled": true,
+  "receiptState": "receipt returned",
+  "txHash": "0x237b26728aa527c8307bca2592f2eb78f582b1cb8813bafb210c75881ec58983",
+  "verdict": "CONFORMS",
+  "detail": "5 declared field(s) present, types match",
+  "extraKeys": [],
+  "semantic": null,
+  "nesting": null,
+  "body": {
+   "canonical": "v1|PRICE|CADJPY|115|JPY|0|bankofcanada,frankfurter,norgesbank|median|1787757818|174073",
+   "domain": "CADJPY",
+   "pubkey": "f4f0e52b5f7b54831f965632bf1ebf72769beda4c4e3d36a593f7729ec812615",
+   "signature": "78b0e9f44395d5c1ce573a94c09ae48059ef33c6df0b22b82a5bccb3b74d41217898e92b12e8c85ba76e626a4660f185c4dabe8f710fdf7aeb966ce8922c6e00",
+   "signingScheme": "ed25519"
+  },
+  "settledAmount": 0.01,
+  "settlementTx": "0x237b26728aa527c8307bca2592f2eb78f582b1cb8813bafb210c75881ec58983",
+  "settlementBlock": 50484237,
+  "settlementAttribution": "group-complete: 2 settlements for 2 endpoint(s) at this payee and price, so every one was charged; which tx belongs to which endpoint is arbitrary"
+ },
+ {
+  "url": "https://api.macaroonnetwork.com/execute/polymathica-transaction-intelligence-v1",
+  "listedPrice": 0.015,
+  "livePrice": 0.015,
+  "drift": false,
+  "payTo": "0x33cc8de6e86761d217044a8a6b394ad23b579596",
+  "quotedAtomic": "15000",
+  "x402Version": 2,
+  "contractKind": "registry example object",
+  "declaredFields": [
+   "payload:object",
+   "predicate_passed:boolean",
+   "settled:boolean"
+  ],
+  "charged": 0.015,
+  "quotedVsCharged": "QUOTED $0.015, CHARGED NOTHING",
+  "payloadVersion": 2,
+  "httpStatus": 200,
+  "bytes": 1943,
+  "delivered": true,
+  "settled": true,
+  "receiptState": "receipt returned",
+  "txHash": "0x7e11ec36b10ced2b30835682a53fa0cfb595f183684115e074c2d999908cafbf",
+  "verdict": "CONFORMS",
+  "detail": "3 declared field(s) present, types match",
+  "extraKeys": [
+   "receipt"
+  ],
+  "semantic": null,
+  "nesting": null,
+  "body": {
+   "predicate_passed": true,
+   "settled": true,
+   "payload": {
+    "patterns": {
+     "lightning": {
+      "total_amount_msat": 0,
+      "settled_count": 0,
+      "failed_count": 0,
+      "success_rate": 0
+     },
+     "stablecoin": {
+      "deposit_count": 10,
+      "credited_count": 10,
+      "total_amount_atomic_by_network": {
+       "polygon-amoy": 5001100,
+       "polygon": 1000000
+      }
+     },
+     "tasks": {
+      "total_count": 17,
+      "by_state": {
+       "completed": 7,
+       "canceled": 1,
+       "failed": 9
+      },
+      "by_capability": {
+       "vortx-pinn-v1": 2,
+       "polymathica-heated-channel-v1": 15
+      }
+     }
+    },
+    "total_observations": 27,
+    "provenance": {
+     "generated_at": "2026-08-26T15:23:42Z",
+     "since": null,
+     "rail_filter": null,
+     "content_hash": "f729856283e0477ff420bb0b3e72b66782ea1855bb34307af52b34b589497799",
+     "no_outbound_network_on_purchase": true,
+     "aggregate_only": true
+    }
+   },
+   "receipt": {
+    "capability_id": "polymathica-transaction-intelligence-v1",
+    "predicate_hash": "4502aaa54c990fd44c685b9175bfdc4032dad3f437268f4d7397d851dc9d5295",
+    "input_hash": "d8261df1943813bf2678ae070f11f8cad37ad5c8784fc6309bb88e0430d6f06d",
+    "payment_hash": null,
+    "output_hash": "699c895e45c66a390886ed70b479ce8ac7bb1206778d32198711912b5d72a5ab",
+    "settled": true,
+    "rail": "x402_base",
+    "amount_usdc_atomic": 15000,
+    "x402_settlement": {
+     "transaction": "0x7e11ec36b10ced2b30835682a53fa0cfb595f183684115e074c2d999908cafbf",
+     "payer": "0xc3Dd3dEe328831fe12F259Fa20725c2Ce312BF3D",
+     "network": "eip155:8453"
+    },
+    "commercial_receipt": {
+     "receipt_id": "b2ded365-13d0-4c43-8759-138c961917b7",
+     "service_id": "polymathica-transaction-intelligence-v1",
+     "request_hash": "d8261df1943813bf2678ae070f11f8cad37ad5c8784fc6309bb88e0430d6f06d",
+     "payment_network": "eip155:8453",
+     "payment_reference": "0x7e11ec36b10ced2b30835682a53fa0cfb595f183684115e074c2d999908cafbf",
+     "amount": 15000,
+     "currency": "USDC",
+     "execution_id": "1e2c42a5-4b86-4241-b6f0-6d1d54a09347",
+     "predicate_hash": "4502aaa54c990fd44c685b9175bfdc4032dad3f437268f4d7397d851dc9d5295",
+     "predicate_result": true,
+     "validation_run_id": null,
+     "result_hash": "699c895e45c66a390886ed70b479ce8ac7bb1206778d32198711912b5d72a5ab",
+     "timestamp": "2026-08-26T15:23:43.375756+00:00"
+    }
+   }
+  },
+  "settledAmount": 0.015,
+  "settlementTx": "0x7e11ec36b10ced2b30835682a53fa0cfb595f183684115e074c2d999908cafbf",
+  "settlementBlock": 50484239,
+  "settlementAttribution": "exact"
+ },
+ {
+  "url": "https://orcpin.dev/v1/holding-period",
+  "listedPrice": 0.02,
+  "livePrice": 0.02,
+  "drift": false,
+  "payTo": "0x8B1CF12e7efe6AEA59cD1124eBbe7709E3Ac6085",
+  "quotedAtomic": "20000",
+  "x402Version": 2,
+  "contractKind": "registry example object",
+  "declaredFields": [
+   "as_of:string",
+   "disclaimer:string",
+   "explanation:string",
+   "lots:array",
+   "methodology:string",
+   "schema_version:string",
+   "sell:object",
+   "spec:string"
+  ],
+  "charged": 0.02,
+  "quotedVsCharged": "QUOTED $0.02, CHARGED $0.015",
+  "payloadVersion": 2,
+  "httpStatus": 200,
+  "bytes": 1472,
+  "delivered": true,
+  "settled": true,
+  "receiptState": "receipt returned",
+  "txHash": "0x263851dfbedd73ff052973650376c55cd0c444b365e953e528da3658096df0b5",
+  "verdict": "CONFORMS",
+  "detail": "8 declared field(s) present, types match",
+  "extraKeys": [],
+  "semantic": null,
+  "nesting": null,
+  "body": {
+   "schema_version": "lotmath-v1",
+   "spec": "holding-period",
+   "as_of": "2026-07-02",
+   "lots": [
+    {
+     "index": 0,
+     "symbol": "XYZ",
+     "acquireDate": "2025-01-10",
+     "quantity": 100,
+     "daysHeld": 538,
+     "longTermFrom": "2026-01-11",
+     "character": "long_term",
+     "daysUntilLongTerm": 0
+    },
+    {
+     "index": 1,
+     "symbol": "XYZ",
+     "acquireDate": "2026-06-20",
+     "quantity": 100,
+     "daysHeld": 12,
+     "longTermFrom": "2027-06-21",
+     "character": "short_term",
+     "daysUntilLongTerm": 354
+    }
+   ],
+   "sell": {
+    "method": "fifo",
+    "allocations": [
+     {
+      "lotIndex": 0,
+      "quantity": 100,
+      "daysHeld": 538,
+      "character": "long_term",
+      "costBasis": 500,
+      "proceeds": 1200,
+      "realizedGain": 700
+     },
+     {
+      "lotIndex": 1,
+      "quantity": 50,
+      "daysHeld": 12,
+      "character": "short_term",
+      "costBasis": 500,
+      "proceeds": 600,
+      "realizedGain": 100
+     }
+    ],
+    "totals": {
+     "short_term": {
+      "quantity": 50,
+      "realizedGain": 100
+     },
+     "long_term": {
+      "quantity": 100,
+      "realizedGain": 700
+     }
+    }
+   },
+   "explanation": "Selling 150 XYZ on 2026-07-02 (fifo) consumes 2 lots: 100 long-term (realized gain $700.00), 50 short-term (realized gain $100.00). Long-term threshold: held more than one year (IRC §1222).",
+   "methodology": "https://orcpin.dev/methodology#trade_log",
+   "disclaimer": "Deterministic arithmetic on caller-supplied lot data; nothing is stored. Informational only — not tax, legal, or investment advice. Assumes supplied lots are complete and accurate as stated; cost basis is used as supplied (wash-sale adjustments, corporate actions, and splits are not applied). Long-term threshold cited: held more than one year (IRC §1222). The caller applies the thresholds; see /terms."
+  },
+  "settledAmount": 0.02,
+  "settlementTx": "0x263851dfbedd73ff052973650376c55cd0c444b365e953e528da3658096df0b5",
+  "settlementBlock": 50484240,
+  "settlementAttribution": "exact"
+ },
+ {
+  "url": "https://eltociear-tokenguard.hf.space/world/holidays",
+  "listedPrice": 0.02,
+  "livePrice": 0.02,
+  "drift": false,
+  "payTo": "0x5bCDA55247B238a573A968B234F788a2D35664Dd",
+  "quotedAtomic": "20000",
+  "x402Version": 2,
+  "contractKind": "registry example object",
+  "declaredFields": [
+   "count:number",
+   "country:string",
+   "holidays:array",
+   "year:number"
+  ],
+  "charged": 0.02,
+  "quotedVsCharged": "QUOTED $0.02, CHARGED NOTHING",
+  "payloadVersion": 2,
+  "httpStatus": 200,
+  "bytes": 2233,
+  "delivered": true,
+  "settled": true,
+  "receiptState": "receipt returned",
+  "txHash": "0x936a9d603e41a47f49ebaab1383d1c6742fdf8d4c43bd52f262ed00fb5acaee9",
+  "verdict": "CONFORMS",
+  "detail": "4 declared field(s) present, types match",
+  "extraKeys": [
+   "fetched_at"
+  ],
+  "semantic": null,
+  "nesting": null,
+  "body": {
+   "country": "JP",
+   "year": 2026,
+   "count": 16,
+   "holidays": [
+    {
+     "date": "2026-01-01",
+     "name": "New Year's Day",
+     "local_name": "元日",
+     "nationwide": true,
+     "counties": null,
+     "types": [
+      "Public"
+     ],
+     "past": true
+    },
+    {
+     "date": "2026-01-12",
+     "name": "Coming of Age Day",
+     "local_name": "成人の日",
+     "nationwide": true,
+     "counties": null,
+     "types": [
+      "Public"
+     ],
+     "past": true
+    },
+    {
+     "date": "2026-02-11",
+     "name": "Foundation Day",
+     "local_name": "建国記念の日",
+     "nationwide": true,
+     "counties": null,
+     "types": [
+      "Public"
+     ],
+     "past": true
+    },
+    {
+     "date": "2026-02-23",
+     "name": "The Emperor's Birthday",
+     "local_name": "天皇誕生日",
+     "nationwide": true,
+     "counties": null,
+     "types": [
+      "Public"
+     ],
+     "past": true
+    },
+    {
+     "date": "2026-03-20",
+     "name": "Vernal Equinox Day",
+     "local_name": "春分の日",
+     "nationwide": true,
+     "counties": null,
+     "types": [
+      "Public"
+     ],
+     "past": true
+    },
+    {
+     "date": "2026-04-29",
+     "name": "Shōwa Day",
+     "local_name": "昭和の日",
+     "nationwide": true,
+     "counties": null,
+     "types": [
+      "Public"
+     ],
+     "past": true
+    },
+    {
+     "date": "2026-05-06",
+     "name": "Constitution Memorial Day",
+     "local_name": "憲法記念日",
+     "nationwide": true,
+     "counties": null,
+     "types": [
+      "Public"
+     ],
+     "past": true
+    },
+    {
+     "date": "2026-05-04",
+     "name": "Greenery Day",
+     "local_name": "みどりの日",
+     "nationwide": true,
+     "counties": null,
+     "types": [
+      "Public"
+     ],
+     "past": true
+    },
+    {
+     "date": "2026-05-05",
+     "name": "Children's Day",
+     "local_name": "こどもの日",
+     "nationwide": true,
+     "counties": null,
+     "types": [
+      "Public"
+     ],
+     "past": true
+    },
+    {
+     "date": "2026-07-20",
+     "name": "Marine Day",
+     "local_name": "海の日",
+     "nationwide": true,
+     "counties": null,
+     "types": [
+      "Public"
+     ],
+     "past": true
+    },
+    {
+     "date": "2026-08-11",
+     "name": "Mountain Day",
+     "local_name": "山の日",
+     "nationwide": true,
+     "counties": null,
+     "types": [
+      "Public"
+     ],
+     "past": true
+    },
+    {
+     "date": "2026-09-21",
+     "name": "Respect for the Aged Day",
+     "local_name": "敬老の日",
+     "nationwide": true,
+     "counties": null,
+     "types": [
+      "Public"
+     ],
+     "past": false
+    },
+    {
+     "date": "2026-09-23",
+     "name": "Autumnal Equinox Day",
+     "local_name": "秋分の日",
+     "nationwide": true,
+     "counties": null,
+     "types": [
+      "Public"
+     ],
+     "past": false
+    },
+    {
+     "date": "2026-10-12",
+     "name": "Sports Day",
+     "local_name": "スポーツの日",
+     "nationwide": true,
+     "counties": null,
+     "types": [
+      "Public"
+     ],
+     "past": false
+    },
+    {
+     "date": "2026-11-03",
+     "name": "Culture Day",
+     "local_name": "文化の日",
+     "nationwide": true,
+     "counties": null,
+     "types": [
+      "Public"
+     ],
+     "past": false
+    },
+    {
+     "date": "2026-11-23",
+     "name": "Labour Thanksgiving Day",
+     "local_name": "勤労感謝の日",
+     "nationwide": true,
+     "counties": null,
+     "types": [
+      "Public"
+     ],
+     "past": false
+    }
+   ],
+   "fetched_at": "2026-08-26T15:23:51.334931Z"
+  },
+  "settledAmount": 0.02,
+  "settlementTx": "0x936a9d603e41a47f49ebaab1383d1c6742fdf8d4c43bd52f262ed00fb5acaee9",
+  "settlementBlock": 50484243,
+  "settlementAttribution": "exact"
+ },
+ {
+  "url": "https://vedetta.dethboy.com/v1/news-read",
+  "listedPrice": 0.09,
+  "livePrice": 0.09,
+  "drift": false,
+  "payTo": "0x21E16F1bc3aA847236354C8193D0cB21cF412eFA",
+  "quotedAtomic": "90000",
+  "x402Version": 1,
+  "contractKind": "registry example object",
+  "declaredFields": [
+   "asset:string",
+   "disclaimer:string",
+   "quality:string",
+   "sentiment_pct:number",
+   "stance:string",
+   "summary:string"
+  ],
+  "charged": 0,
+  "quotedVsCharged": "QUOTED $0.09, CHARGED NOTHING",
+  "payloadVersion": 1,
+  "httpStatus": 500,
+  "bytes": 21,
+  "delivered": false,
+  "settled": false,
+  "receiptState": "NO RECEIPT HEADER",
+  "txHash": null,
+  "verdict": "NOT_DELIVERED",
+  "detail": "seller returned HTTP 500; no delivery to check against the contract",
+  "extraKeys": [],
+  "semantic": null,
+  "nesting": null,
+  "body": "Internal Server Error",
+  "settledAmount": 0,
+  "settlementAttribution": "no settlement for this payee and amount in the window"
+ },
+ {
+  "url": "https://www.stratalize.com/api/x402/fec-campaign-finance",
+  "listedPrice": 0.1,
+  "livePrice": 0.1,
+  "drift": false,
+  "payTo": "0x5d51ECC50813E0937a5c43be298E9146796ad60d",
+  "quotedAtomic": "100000",
+  "x402Version": 2,
+  "contractKind": "registry example object",
+  "declaredFields": [
+   "name:string",
+   "political_footprint:string",
+   "receipt_id:string",
+   "source:string",
+   "verified_at:string"
+  ],
+  "charged": 0.1,
+  "quotedVsCharged": "matches quote",
+  "payloadVersion": 2,
+  "httpStatus": 200,
+  "bytes": 17429,
+  "delivered": true,
+  "settled": true,
+  "receiptState": "receipt returned",
+  "txHash": "0xeb8650a8876125caefb335205c52fed59e91dbfbe3dbe1374be0de76f5c844cb",
+  "verdict": "CONFORMS",
+  "detail": "5 declared field(s) present, types match",
+  "extraKeys": [
+   "committees_found",
+   "committees",
+   "total_political_spend",
+   "retrieved_at",
+   "synthesis_id",
+   "tool_name",
+   "_stratalize",
+   "_receipt",
+   "related_governed_products"
+  ],
+  "semantic": null,
+  "nesting": null,
+  "body": {
+   "name": "example",
+   "committees_found": 89421,
+   "committees": [
+    {
+     "committee_name": ":",
+     "committee_type": "P",
+     "committee_type_full": "Presidential",
+     "party": "WRITE-IN",
+     "state": "MA",
+     "total_receipts": 0,
+     "total_disbursements": 0,
+     "last_cycle": "2021-02-01",
+     "fec_url": "https://www.fec.gov/data/committee/C00684373/"
+    },
+    {
+     "committee_name": "007 GO GODWIN COMMITTEE",
+     "committee_type": "P",
+     "committee_type_full": "Presidential",
+     "party": "DEMOCRATIC PARTY",
+     "state": "VA",
+     "total_receipts": 0,
+     "total_disbursements": 0,
+     "last_cycle": "2015-08-10",
+     "fec_url": "https://www.fec.gov/data/committee/C00462390/"
+    },
+    {
+     "committee_name": "10000 LAKES PAC",
+     "committee_type": "N",
+     "committee_type_full": "PAC - Nonqualified",
+     "party": null,
+     "state": "MN",
+     "total_receipts": 0,
+     "total_disbursements": 0,
+     "last_cycle": "2026-08-20",
+     "fec_url": "https://www.fec.gov/data/committee/C00886879/"
+    },
+    {
+     "committee_name": "10,000 LAKES VICTORY 2014",
+     "committee_type": "N",
+     "committee_type_full": "PAC - Nonqualified",
+     "party": null,
+     "state": "DC",
+     "total_receipts": 0,
+     "total_disbursements": 0,
+     "last_cycle": "2014-12-18",
+     "fec_url": "https://www.fec.gov/data/committee/C00555748/"
+    },
+    {
+     "committee_name": "1000 WOMEN STRONG PAC",
+     "committee_type": "O",
+     "committee_type_full": "Super PAC (Independent Expenditure-Only)",
+     "party": null,
+     "state": "FL",
+     "total_receipts": 0,
+     "total_disbursements": 0,
+     "last_cycle": "2026-07-18",
+     "fec_url": "https://www.fec.gov/data/committee/C00877886/"
+    },
+    {
+     "committee_name": "100-40 PAC",
+     "committee_type": "V",
+     "committee_type_full": "Hybrid PAC (with Non-Contribution Account) - Nonqualified",
+     "party": null,
+     "state": "VA",
+     "total_receipts": 0,
+     "total_disbursements": 0,
+     "last_cycle": "2024-02-22",
+     "fec_url": "https://www.fec.gov/data/committee/C00831172/"
+    },
+    {
+     "committee_name": "100 BLACK MEN OF NEW JERSEY INC POLITICAL ACTION COMMITTEE",
+     "committee_type": "N",
+     "committee_type_full": "PAC - Nonqualified",
+     "party": null,
+     "state": "NJ",
+     "total_receipts": 0,
+     "total_disbursements": 0,
+     "last_cycle": "1997-03-19",
+     "fec_url": "https://www.fec.gov/data/committee/C00239533/"
+    },
+    {
+     "committee_name": "100 PRO LIFE PAC",
+     "committee_type": "N",
+     "committee_type_full": "PAC - Nonqualified",
+     "party": null,
+     "state": "PA",
+     "total_receipts": 0,
+     "total_disbursements": 0,
+     "last_cycle": "2009-10-07",
+     "fec_url": "https://www.fec.gov/data/committee/C00358796/"
+    },
+    {
+     "committee_name": "1031 PAC",
+     "committee_type": "V",
+     "committee_type_full": "Hybrid PAC (with Non-Contribution Account) - Nonqualified",
+     "party": null,
+     "state": "DC",
+     "total_receipts": 0,
+     "total_disbursements": 0,
+     "last_cycle": "2026-08-20",
+     "fec_url": "https://www.fec.gov/data/committee/C00724070/"
+    },
+    {
+     "committee_name": "10 ^ 9+",
+     "committee_type": "O",
+     "committee_type_full": "Super PAC (Independent Expenditure-Only)",
+     "party": null,
+     "state": "CA",
+     "total_receipts": 0,
+     "total_disbursements": 0,
+     "last_cycle": "2014-06-16",
+     "fec_url": "https://www.fec.gov/data/committee/C00563023/"
+    },
+    {
+     "committee_name": "10 PUSH UPS PAC",
+     "committee_type": "N",
+     "committee_type_full": "PAC - Nonqualified",
+     "party": null,
+     "state": "GA",
+     "total_receipts": 0,
+     "total_disbursements": 0,
+     "last_cycle": "2026-08-13",
+     "fec_url": "https://www.fec.gov/data/committee/C00943464/"
+    },
+    {
+     "committee_name": "10TH CD VICTORY FUND",
+     "committee_type": "Q",
+     "committee_type_full": "PAC - Qualified",
+     "party": "DEMOCRATIC PARTY",
+     "state": "VA",
+     "total_receipts": 0,
+     "total_disbursements": 0,
+     "last_cycle": "2007-11-06",
+     "fec_url": "https://www.fec.gov/data/committee/C00429613/"
+    },
+    {
+     "committee_name": "10TH CONG DEMOCRATIC WOMEN POLITICAL ACTION FUND",
+     "committee_type": "H",
+     "committee_type_full": "House",
+     "party": "DEMOCRATIC PARTY",
+     "state": "IL",
+     "total_receipts": 0,
+     "total_disbursements": 0,
+     "last_cycle": "1980-01-25",
+     "fec_url": "https://www.fec.gov/data/committee/C00119693/"
+    },
+    {
+     "committee_name": "10TH CONGRESSIONAL DISTRICT DELEGATES FOR BOB DOLE",
+     "committee_type": "D",
+     "committee_type_full": "Delegate Committee",
+     "party": null,
+     "state": "IL",
+     "total_receipts": 0,
+     "total_disbursements": 0,
+     "last_cycle": "1995-03-21",
+     "fec_url": "https://www.fec.gov/data/committee/C00223743/"
+    },
+    {
+     "committee_name": "10TH CONGRESSIONAL DISTRICT DELEGATES FOR MONDALE",
+     "committee_type": "D",
+     "committee_type_full": "Delegate Committee",
+     "party": null,
+     "state": "NY",
+     "total_receipts": 0,
+     "total_disbursements": 0,
+     "last_cycle": "1985-02-07",
+     "fec_url": "https://www.fec.gov/data/committee/C00181032/"
+    },
+    {
+     "committee_name": "10TH CONGRESSIONAL DISTRICT DEMOCRATIC ACTION COMM OF OHIO",
+     "committee_type": "X",
+     "committee_type_full": "Party - Nonqualified",
+     "party": "DEMOCRATIC PARTY",
+     "state": "OH",
+     "total_receipts": 0,
+     "total_disbursements": 0,
+     "last_cycle": "1985-04-12",
+     "fec_url": "https://www.fec.gov/data/committee/C00163121/"
+    },
+    {
+     "committee_name": "10TH CONGRESSIONAL DISTRICT DEMOCRATIC COMM",
+     "committee_type": "X",
+     "committee_type_full": "Party - Nonqualified",
+     "party": "DEMOCRATIC PARTY",
+     "state": "MI",
+     "total_receipts": 0,
+     "total_disbursements": 0,
+     "last_cycle": "2013-04-08",
+     "fec_url": "https://www.fec.gov/data/committee/C00408286/"
+    },
+    {
+     "committee_name": "10TH CONGRESSIONAL DISTRICT DEMOCRATIC LEADERSHIP CAUCUS",
+     "committee_type": "Y",
+     "committee_type_full": "Party - Qualified",
+     "party": "DEMOCRATIC PARTY",
+     "state": "CA",
+     "total_receipts": 0,
+     "total_disbursements": 0,
+     "last_cycle": "2007-03-14",
+     "fec_url": "https://www.fec.gov/data/committee/C00296806/"
+    },
+    {
+     "committee_name": "10TH CONGRESSIONAL DISTRICT MONDALE DELEGATE COMMITTEE",
+     "committee_type": "D",
+     "committee_type_full": "Delegate Committee",
+     "party": null,
+     "state": "PA",
+     "total_receipts": 0,
+     "total_disbursements": 0,
+     "last_cycle": "1985-02-07",
+     "fec_url": "https://www.fec.gov/data/committee/C00180141/"
+    },
+    {
+     "committee_name": "10TH CONGRESSIONAL DISTRICT VICTORY FUND - FEDERAL",
+     "committee_type": "X",
+     "committee_type_full": "Party - Nonqualified",
+     "party": null,
+     "state": "IL",
+     "total_receipts": 0,
+     "total_disbursements": 0,
+     "last_cycle": "2002-01-30",
+     "fec_url": "https://www.fec.gov/data/committee/C00360305/"
+    }
+   ],
+   "total_political_spend": 0,
+   "political_footprint": "Committees found — no recent financial activity",
+   "source": "Federal Election Commission (FEC) — api.open.fec.gov",
+   "retrieved_at": "2026-08-26T15:23:55.109Z",
+   "synthesis_id": "x402_8fcfdc4d696940328f139f2ec9d3be9e",
+   "tool_name": "get_fec_campaign_finance",
+   "_stratalize": {
+    "signed_at": "2026-08-26T15:23:55.243Z",
+    "signature": "EFUXYWI7LQ9QKXapVRRv-QEBqbB5GjWSkf4SN6L4me2ZYloCo70mYfCioT8vT8OHUFjRD1k6R8kh-nGNDlf0Ix4_r0SvR-YPm0yDw0RyEEfWe6Yzh-DOw96u2F8MfvhQ8qXaI8TN0EoyGhzbaWnNQf4V3KwCL2cYRvk2FEYXc5T-8tGRXinv0iH3jJtNd_hirgQRvNmCL0qbt0YrNg9RJ5RBaoxSWVIuyM2pcPvOnTx1hM01Guz4CR0VNGTyliztAhxfJ6GOAF64BJcVBrUxuDqfteVRQ2zJJwdnF0tWJLIMFQ0GtRnMVyzwJpE0NiDxMDoWrU8SZ1WraOvDM9CqBOXfLxxAY38vdFc13qlQB0DIp6eDQ43FGlv_FUSvmnjzMlAUBn24A1oW9vk6GryYivNfNgRHk_7VdZdrkxeHz63ApyrBeIhmU_IAvWnGUBJQd8OucOSDL-7HxEY5YCWjRhjA9X9bXOzObrQWWFXMUN2BVoGDrs9pYTqVPVGS3U0HbMTCSE3fgFD5oA45FhDaXtowKUQ_REDglHsRYM1ue_3EmBorYdI9-ZmAAY7g6YboTcvOm6jwC1NVSg6Z8cdCrahbrCJwj_qBRTuHXQUsD0xDnv_3AM3OCuB97xvzJmM-aGmPmUKD9E2Hv1Un_J2Wlc_NKbaKLs0UGC8I1nuhso7mWDbe9KoyMeb3DyPcyS9Xg0kpvgqpGwHDCdaMS7WawgxQyMyqDSRdHw8F338a7ZiyfjpikgD7pxXm_KWQLhIa26QXJXkSa7iQaeFPBTLDtK9VR5HX8fyeNVOJ79hqke0gMReeOBzs6dQbTainAlhIXnAehKoBM162NDI27zsDWzrV1d-H5_p1Wq7w4xL9CCnpKSIKkvKq6nStgebWJCrLgYuZmYg-HsK2GgkyYf_bB6_T879h4ccHYgw1KZunESV4R8YQ-TXpOjGuKryXWNXt2HPPJNkS0b-rNVGbhFZjMnkYsRCqFoCfhR7zGs09ngiycvzpunzt6Oro4EFXQ6foYs_yydK4SK8Dpyq6xA89w0Ie77rfDB1M1_XAubA6rECFeR5ay54A84lbc4uO9xKgaxTOwxOQzKX03tiqhVf_RhR9g3uzVLcdI17AF7H_3trHt4a_7is1Sp3meYxHJCOh2KIDVIaIdCDn5pA99ULusoeV_NdvJM33rXj5geC-eUAmBM69gxI5xmT1GHY0ft2a87tKDQ3MQOY_dhGV0ZNPMHl9NG8yAAV8A6nBdeuMmtMJ8sQ02S4gV6qG1X_FE38poHQbQPDrjvKq3q7y60o7GqlyRlR5FMR_O7_Ln3q133AJicQpR-f9WwfOYzvrJ2NMQBdRt5igE7mtxEs-6FCZX_Nr8qzrkSqtPINnMDxZmwds0XFDLk0DrlKakubUyAYGBxVynYEM-K-ZyNuQftJ0Pmf4inQ_XDFad5O3b1OkYJkfdQmmBhWHXb6q61ttJsxdXt_r3KvPdnaGseyqdS7evrITRqtmbIiOMOnXUVOGzVB0fi1kjrxlvlhbaP_3wLe4YOhMtw7Hh2wlBoHVaD6m8CgNMlO2Tusm4f0pS9gojDh2M0fbf_BwHidWwx56DcxPOq5cEgTIwC42Y0nXHcUiURLTiHO7cilim7CaO1mCm4cG5ZWhMcGilGqkltTYVqiBQzFcg3n51yOF0dapOuhuO-qS9BUyL_yzZGaUzSYYpUBgHoCZOyny0z73I2HzaRUyqBuZpSQ9Z_MbX9EPOadnR7IRDjITYYvWPoc6wGX14Bq3l-hHIgqgP-3Zhzq0NINYmC1B1gbot44W8wJBF7HZ0xHMIBQeDWT5S44RnVOrmqF9aVyXG4WUc8udW6rJmu-t-092aGCp0Iv9RsRnClaGXEZ2wYnatKDD4RtTyYXLPeucu4As_AqLtJX2JQWoLk-VZWm8EiLNNHN0fi8MabQggxipnouWSmp225_L7dSLc43lRjtaDIyjm9MGN5Q_UF9npivtBpwFEpiJe9fkfOWdEeHCX0tf0VGuhk-HCq5SrNbNsH4V5MHAVIZXfY51z13F1p8f7zYnkHBB-Xa5G-D2nWKvwtck8uVRAxWG_pRKoCNRi0Wg_nT1UTpRicS1Q_NxiSByCFm_gTt4ce47e6zdH_VZhCBeMjeMS4EYJPGrcz7cdS7dFruwRQZwNO1WsJU1UT9DsY8N7zffFBL5NRPmBSEM5fUCE2qiWb2-gqqAJMRUqYR2qqdHgBn55z5Ea-ITmSQPsiBdJj-YMuiAFTxTpraXvWTyLXBq3qYj5fJwIQ3TTgF4jR-L2vr9hlMWCOd5IcMJZcGTMdCvk1m3hEmGV3XWrGgPOlFNbSD4a7ZF2ODkQiLK_GkyWlgcAfwK6CRBgsUEOXlx1oddNSUhkcJ2QqrXMBrCJsU0g4eyHr8xrvTYZKRKekWecqFhg1iSHhy3JSzMmGK7zCruITTNHvxCFT1RSbKvYCkYCNEJQCzd0vsnV0yioraGGNO3tWY6_bDK2ohfxs7pSk_0G_ay9Bd8l4N8R1W5RUglMNYX2j5pO8MqGxg7mP_tbnY53s1KPxJ0qdESRx-iLEVbfwAjscXyr3ZFLBofyI97QZpWJ2bFalHU97vIZ2Bk37tX_BshlR2sw1fovspFKtgedRKwXgBAmKzYevDH2cRz_v7A4o5d3DtVd_oWXNaTbW00DHJzGSA574E2hUX9n_LrLmLcU6i7iIm8AUUvzxjboy3O3hniOW7MsVZk_JhRfsTRFxcXxuS-JySJXxBJAsIBYN2giLmzinafU_WWH72rfZUxvPl7Y28cOjr7frr_zn7xfEmAwvBflreQT04a_7GWqlUlxOVSep6PcOaXXkk0__KaABsgq48KPYPG0OxcG-Jvb3aDkJ6_BRmYmiIfIU_5xhL6O2WkKkaoONcbmiuSGwYVaDOqql6Nwdo5VuOC1s7_GdfIWql-AJ5VS12J-jZlVQ7DGtfwNIn3qYUAECOFDgVlh_byzfp1LSp5nAji2avgBE6lBqBYp7OJByRq3ZIlvDGZqsoTJSM8ZlLgC0KqXY18RXfcKs8xIHtVgbI4c-i9urM5xIF9z6iDorJ51yxlN2zedU6lB6kjTEiJ5c2-sVWM90t0TzM4TYo85-NhB_VrlJT4QhkWn5ZxGSU5w9kNJ2GN92He4JjpHwsvB2Af4zJ9vx56aY7-T7PnndktfemdEhzKvFK-OiEr7cPXyVXSluc5idP3k2SWWiypJ5mwkCXMD2SSP-dokSaY29C2pp8gtYxRT4SjvL9Z7I0Q8u8dFngu8rlDWWnF7z1-yC6YMXdd4mxWl-OmkUsYQRqGzfjZc47QORe2ME88A6KvNIzwx4IRLGNfbZig_m0TE0UBhQqCSGVNBD_MSgxJM9k8cbCBL9HAL0DIZkJZg7Kn9SSPi1LIxC5JI86P2uBsDp3t7KUbMWXcsADebZSDh2eyERT4vMRpoCxph_5BZ1CpevFH6TRtnV5m8X_6m_zZozioLCunecdN8ATXh6PEwNaV0cLtxWc9meWxooVZ8ulNRb_G3gQ0qzHy49F_4yVdngyWpbe4PMhzjshxosdx7hvIIKpqaoXlExxrDDIqzXHjPIEKCusbUrDK0SV1Ln1KZKNYkhv_t3dPRQlf7uxJ6BEVQb0JFZGZ_Ihr8gkfE8kSrVGLflJ8Y4WBeKWFJa_UKQRiRWQvb8F2oo3WYB4ygLmPpkn6D-9GOIpFUI175G-6kAeullbYV7uhCzEyHP1U2OwGu5XTvU0416deDqVevo8lFrwJsdiHlZSe4nUQrFTCGQlMZJgB0JPhLLHWRPKW29aBLOrHlA6XT6O1FK5Xsif9_FTZWMk6P887tavcXRm1FFS16aT7E8btEUgJC1A8YlU8FFTABh50jmHYugvOoVHd1cPpCOlfqFA2C_TiiK-9SpN2P7kL6MnYfnCD6OCy0g4fEVlk2PGVp4-JQiv80pyZoocqN6-nJoMJ2DYaEhLIlb5nl16l0FBUcFg1FNNxLbbHX-6xJcc40UfBXOOGptvy8_DbI6xzP5DrKpDTG7dmE0ZIkPmxdQn-ZnoAhTktoiHHLEmudboO20Sb7TI9Qx9LUCIeB1EmNkiu0r3IFeJds0szSSKQWqsTdNOS3ApJqnrGgLPKF_1qZUDAfxoyzUSVgesp174GemLTIxmooPdUOxBT-4MPTFLiHONNDJabyMPkt-SOucIVPWUICwPYn67bsfL8etxuyWPethP-EnJ9yiA2BWY4GPDBcaozsZmSh6LyzXPDFZuFocG1dvt1fUadTRuBn3ICCf12g8Q06qqSVBcsTTH-FRl4co9tz6hALCXlTdwRZWa7fxMUH3OAjiNNmtwmRZCTFzpVvgMOLz6QmO0LFRoxPG6Uuu30-QAAAAAAAAAAAAAAAAAAAAAAAAAABQkNERgj",
+    "algorithm": "ML-DSA-65",
+    "public_key_url": "https://www.stratalize.com/api/trust/signing-key",
+    "canonicalization": "JCS-RFC8785",
+    "version": "1",
+    "synthesis_id": "x402_8fcfdc4d696940328f139f2ec9d3be9e",
+    "stratalize_verification": "https://trust.stratalize.com/verify?synthesis_id=x402_8fcfdc4d696940328f139f2ec9d3be9e"
+   },
+   "receipt_id": "28886442-e304-4b61-9131-3976093b63ed",
+   "verified_at": "https://trust.stratalize.com/verify?synthesis_id=x402_8fcfdc4d696940328f139f2ec9d3be9e",
+   "_receipt": {
+    "version": "1.0",
+    "canonicalization_profile": "GSR-JCS-1",
+    "receipt_id": "28886442-e304-4b61-9131-3976093b63ed",
+    "created_at": "2026-08-26T15:23:55.938Z",
+    "payment": {
+     "settlement_tx_hash": "0xeb8650a8876125caefb335205c52fed59e91dbfbe3dbe1374be0de76f5c844cb",
+     "amount_atomic": "100000",
+     "payer": "0xc3Dd3dEe328831fe12F259Fa20725c2Ce312BF3D",
+     "chain": "eip155:8453"
+    },
+    "governance": {
+     "tool_called": "get_fec_campaign_finance",
+     "permission_model": "public_x402",
+     "permission_set_id": null,
+     "agent_identity": "0xc3Dd3dEe328831fe12F259Fa20725c2Ce312BF3D",
+     "abac_decision_hash": null,
+     "data_sources": []
+    },
+    "synthesis": {
+     "synthesis_id": "x402_8fcfdc4d696940328f139f2ec9d3be9e",
+     "output_hash": "fec620c49dd3664efae4fbde79c7191913d70bc3e7c8ac7acbfebdc99d1640a6",
+     "model": null
+    },
+    "provenance": {
+     "persistence_model": "tokenized-artifact-only",
+     "storage_architecture": "jit-synthesis-no-source-retention",
+     "jit_pull_timestamp": "2026-08-26T15:23:55.938Z"
+    },
+    "anchor": {
+     "contract": "AttestationAnchor.sol",
+     "chain": "eip155:8453",
+     "anchor_tx_hash": null,
+     "anchor_status": "pending",
+     "digest": "09aa8ec9ed8b46b3b8684dde174e7d6f5b0effa8109702a60f305e09307ec510"
+    },
+    "signature": {
+     "algorithm": "ML-DSA-65",
+     "signer": "mldsa65-98f3dd3edf3cd46c",
+     "value": "6bYbjBI3ugDc-0a7q11aymUzB-RgzrSBvPfcpUxNI_jpiy5haH-nO-3g3M6bWBOTyCW7YrNc3DbjXGXUU8Zil_VnM6uS2DvXZDr1_d9IKBlCzy5RNRNYaZ2JaQdUH1U0lkztR3ikPb1_xOGLW56v2AwdUr9by4bsWvoW3HAJxsk1WnlNRUjAeSSmTzXg3uL1GSr6qVPmD3SW0Q5oXahRRbXQeHw4O0DUCoHLaBpg2E6Y3SVctenF8-Za5dmn7uNN_wDWcR4ZU6TbeiRg23h-gk9yJe8vPEKNcb94b8uzkhNr3LEEc7GZNSeLBIoZKKN6yMr_MR1C5-zyySAFW8PLMeGp9LkA9sDRuDkCDOdJ9Pmw9BU1IU5BthwDrgVyXBP1ipgWSfsN0zGh5GI7AQXSAih7vLcJ5I9QFzrjdyeId7YZFktblgVZ3shsoHqRMbzc0xnDUkMN2hXDdM1vQr4DTE322Umzcth3jzVityF2mjtAUdXQzHTZklSbnnG5sSqEL0CZxw6jJTO0mbKUxWPb6ml5wj1mjMmuS4NaRiyoGVnh_QPMbO1VR3mZu1kaZbX9haUFRCKjEwGAomAGDaS9AdtjKD08JAgC9_5028pTQ5oyWOFJ2TyOv4NsoC2FJdO130kbo5r8phKEcuKgyKlyQ660IAfKy5e-6YNFech6CLRXifikqzvE3zgEHuAZFsraYb91qYft4u01_M5MMIjQ3j6jYZna0MIB_tZik3z5ojSKybjRhKbEeNPDl4Z0k9Xzg7nwuElJRGzyZkaY_9H76EtWxw-Z0yLCsJm31NM3gFevsZ9hdrmsiXY705w6mLUjOFI2dX-M-MauCTAgJJocQxmCaoypMvHrLT84SP3FhAZbFmdgQNI64TUDEDOv4h8YDMemS5M8PXQNfmxVgL_PQgH2h0ndQgmtrklxWTfc9cUvW0xNcPrY-Mk7ScSOnnWM1ubk3-mLywFAgujBhOSMi3dTygpYA_e3Lgi_tFeTPei75gfn7LkKqfdS2kp43X93GkoUwgiomB1BTtUBG8lLoF-nreoGGXbJ-b1e0ruRgdja3cu3opbIVpgd5EEZK_mGilbby1YXZzKRWjNf2RnoxZW5bFmAHRiFq3NJoZn2q0rVRaKlj8CsX9VJEsihH6r_qz9Hpiag1r_p_YUzUCxjhi6rwiPLX5Puror_qt4hYN9B0bOs327p33oZh-2HhQisTuDeb70AnME_WQKeYjNLaKBGCziHMlxoBsSUIksBTUO_MKZueq17znkLxlbxnrocHQGT3MYrKLP518SUwOrYFgFtRZRUmhTszQUgBIur26cyixoufzdxtod4fq27UBvP6yL7Exb_N_6YfI2ZMDHiic_MhFgNBN-x1MQESLQv3S_KzlPt_N_gZZxaCJDUUIpgxS33z9wZv98D3joM5h4ECFMkghqvwRPki9LqimbY0hBNW7kehBZz3c04EqskhA1b3X4O9rewdLUXFtuOaCrJdyOP7jco_QZvzlpQ7zs_NxbanhXc6KuLqajEcHZcKVrOj-eO1FW7HHj1_ebk2J7mXELVacuYNtf4Gxs1YNGOllUPPO-BYJSFTP1MYJHFpQprt2j0umkah-gYJou4xzMDI_JkOZ3e1UEzyREfRzK068z2t01GkNIazrv4OBJCzHnS_JcBP5hfGLquUKYh0G96QnwgvT0OWRxnOEXRIazxJtl6ea7kppvmOj72a4XvWO5RsrboXjXFwCFub5MsMvNbBP5VHxTg8zfSAHyn1LjBC_kNrwj_qdJYHlPla1fHy8l9Tmey7p_8cE_Moi3YcPDlNQaX2WsHAah3mtXvBRFghNPpU3JWxmu1E7hkjgI06FQnsaYit3n52zFqocjJ8xzp_zqutpvGoS0Iv4qIRpccxTPa64JmEAbHWGQ1GrZqfHn_62wX28yy7ZobSnFKVWWMuJH_oxzxqujnXgwxHZB5HpYNqPvLWxODgNdcKuCUK6-GRXwt-llSEwo-ZleDfr7AweTxa71WMP7n8r-anE4L1n17Zvfj2jUwWWRbXsk1wmDYs4YEga467VgnvCLwNBD8admxsTkEXtDimzm8cK0zYJT_s5gWQLp6OczJe-jxnqv1ABQFKvTjAR3t4bGjphnhDPjyX-0WS71GZL_vWgPsE7tT6wIJNzc_7V7nnTwTexZfIAxf1QNk8TONyTCHT3_2GoLHVEQMujmXqECNsG-7U8V7xJZgq3K3q3wFX9imjLonmFa6lmWgf7waxgqmNJHf4VrbzdI-pibTAcEbmeRYBi4bNXsqyhBsMgcoYsBCGfjhJepGUl6TpVd77O5Z0-TOgP-jB086xXbG0fojMpgaqlW9OwDdyjcPJ4udr54pgt2depM2k8I3wdCvKEPdtHzzgFBqO5FXyTdbh1926pNLL0-FaPePSyboPYkM_VmNmvH91ZMH_kTpau_h7EctJ0bQtzhZk5L6j6J4coN8IsXvU6_8pHKORhZnlMsbhoP-lwkdOiA3c-i64PAh5pVcwDCVxrXvHjgiDuXoZeg5nRG0RDbPk5tEtGqkpz_ZXYa89xp33uywJkCONJyq0uAL9QsdN-9ZwNI8SpIXTHM5zeuZhxE4W5W0ihyrOc8MoIjKPxUVMzwckKDKnH37KRSn9whsZl8XdQWyGGZa1utYwvcVovQ4h6YWAoj8yZNrt1nzNt77qNKuPYZw3NhMZYKcyn71icEWIasfdxuLlos0pjSFYqgF-eupZHBk8mIcMiOVhOvprjzN-tr15IP7FEftlLORc8owQzd0luwDrkodJyxxNN113LPJQWIJ7AERk7LdDuDVGU9v-JQtd81IrLfoDxtsrdzJLwe2JWj12YInp9D4kuLy-k2jrlkPCkDJm4Y46xBauLDj3VKpYGHfqg0XZfmTQaf3iDtHC5rSOV0vqN1aqPAMAWYAby3enhPm1oKAnlrYTMRgWPkjcNJPNGvJxIt1udkZPoEhaFfGUzFR8yaqh8u7Hh1badxS4DDfoiPo2Zfqs6CEOQTl6VElkGfSDxhO2ki6Lni_Qy11QcL87SRVid0xOURv3sLEiOYRlVjcmV-4A-8Wb9uzzzQTmIPAKmrCn3Yd_LIrOpDe5joaRoMk85BkNncRUtVBUiL90Q9zP2qtpxhBaoCRAqkqHWuIwaZ37p24Mmqh4HZwOQPgxN2rtQhSwBEUbYAmHhrY3iMhvSpfDKb25Ab6ypr0pnmauFMtjNHrd3vjzG95UFzf53XflUKvPttSrNl_nvdsjKAlr_SIQu9bL6c1tBKHmKHiuACbSJ5nRiFKmr0B-hh27k1YnSRP8cOiaIqzwWuFEEtwS-FZ8kbE8NeqvMaxyMVjbmZaXrh17YatQyytNjys9Rc_w1RSBPFkS5yGIzsf5KzBq63GQAcdZM9h9Rpxr_ks7hGWi8_gCyfoQNK994uxeGB5CLb30QNEMCM4FRMF5bxnkDKNAp10KL0gZAHupJNO3C_SRMoYLnw_svqATBscgS43Tyf3rzD8koDIUM_2cDj2gW-0-c17rqrsubq55OkhcZ6idcN0uxcYLouKP2JWr7nJnBRo4LOTPCsbzJ2muCsPh6bzxpWsz1aqIbjVWJAUY_mf3jPHnqNsoK6XCglhqOAnCT5oBxEFuMqMv9xAwZpP8GEokigv3szhRWY_wrVTGeiyytWYOSVmH_ZfwqfL4tm-B3CnLWPK-f5R6tT-CmaMBzR1ZJYOxCGy1Bbyj9srRwEjkKKRd_cTjdNEAcXn9TFyEaNU3ANHPBrxGzvYU73rTbPr5AwUKPRTv2iM8e51gfOmbLBG3uHf3SMZ8AouvgoR3fUJZg0gvJdDM23OUbkrNs35Jdv6PGF-2gm5HqGbz4CdMYNwAIgF7ap2c1oS_KTXh5a_YTKXkWevj67i9QLcvkKdlAW4BjpeDzSgnROPgZXp-cPrXqTG7-ZhA2M6Q0GWN5OD2rZmGr_SQhwtAR7js-3eo98ZT8Zaj4GLOdjpxhsMWy6hns1FlDvhaRWLtrTvwo2YYHsOiSeFtHWCEensnhowdMa5V4ywgniAUDnCA_kfa8pZqp4cgEp7E8Nl5-ul6rJUjd4DwPjvPK62s67txoejh7Ummfl0vo69BcHE6Xj5qzn-9krYb0T9mLOy73QjB64yd7uIzp078bfWWtMpzWssm6qPCovQrmrUYZvz8R7uTJ0EG9AsfN7HgeDolBFXwoECCFHCgx7H5J0ARwM_8WD76q49Xk7fGWA6UVpNj05ntrSESGZYrBdnJ4jE0mrwkYOtZMEl_N9EyyCoL8CjvD3rrYahvnhgthOTWLBSMLr-r-J8GswGMSahWKGgbWldT-14maj9BDI8YHB65Q0VHTRsncDD1N4pU4iLj5SXreD6OUzQCEGp1-0AAAAAAAAAAAAAAAAAAAAABAsVHyIn",
+     "signed_at": "2026-08-26T15:23:55.946Z"
+    }
+   },
+   "related_governed_products": [
+    {
+     "tool": "get_aml_regulatory_benchmark",
+     "tier": "synthesis",
+     "price_usdc": "0.50",
+     "resource_url": "https://www.stratalize.com/api/x402/aml-regulatory-benchmark",
+     "description": "Use when a compliance agent or bank risk officer needs AML enforcement benchmarks."
+    },
+    {
+     "tool": "get_vendor_onboarding_dossier",
+     "tier": "outcome_pack",
+     "price_usdc": "3.00",
+     "resource_url": "https://www.stratalize.com/api/x402/vendor-onboarding-dossier",
+     "description": "Use when onboarding a vendor or counterparty and you need one signed composite dossier for examiner-facing diligence."
+    },
+    {
+     "tool": "get_x402_seller_statement",
+     "tier": "outcome_pack",
+     "price_usdc": "3.00",
+     "resource_url": "https://www.stratalize.com/api/x402/x402-seller-statement",
+     "description": "Use when an x402 seller or marketplace operator needs an attested on-chain settlement statement for a payee wallet over a bounded period."
+    }
+   ]
+  },
+  "settledAmount": 0.1,
+  "settlementTx": "0xeb8650a8876125caefb335205c52fed59e91dbfbe3dbe1374be0de76f5c844cb",
+  "settlementBlock": 50484245,
+  "settlementAttribution": "exact"
+ },
+ {
+  "url": "https://agentdata-api.sander-van-aard.workers.dev/nl/insolvency",
+  "listedPrice": 0.15,
+  "livePrice": 0.15,
+  "drift": false,
+  "payTo": "0xb0ae6a9bd7a573ddda58db6c28622417e8ca2099",
+  "quotedAtomic": "150000",
+  "x402Version": 2,
+  "contractKind": "registry example object",
+  "declaredFields": [
+   "matches:array",
+   "query:object",
+   "register_status:string",
+   "result:string"
+  ],
+  "charged": 0.15,
+  "quotedVsCharged": "QUOTED $0.15, CHARGED NOTHING",
+  "payloadVersion": 2,
+  "httpStatus": 200,
+  "bytes": 808,
+  "delivered": true,
+  "settled": true,
+  "receiptState": "receipt returned",
+  "txHash": "0x51712058301c3586eef7a955249ca57f30818eaf85b1473cb766d98501629e63",
+  "verdict": "CONFORMS",
+  "detail": "4 declared field(s) present, types match",
+  "extraKeys": [
+   "checked_at",
+   "coverage",
+   "uncertainty",
+   "disclaimer"
+  ],
+  "semantic": null,
+  "nesting": null,
+  "body": {
+   "query": {
+    "name": "Example B.V.",
+    "kvk_number": "12345678"
+   },
+   "checked_at": "2026-08-26T15:24:04.772Z",
+   "register_status": "live",
+   "result": "no_match",
+   "matches": [],
+   "coverage": {
+    "result_meaning": "Result reflects the currently searchable register (publications since 2005; entries removed 6 months after termination).",
+    "historical_clearance": false
+   },
+   "uncertainty": {
+    "note": "Match op KVK-nummer is sterk; matches op naam zijn indicatief. Handelsnamen wijzigen en naamgelijkenis bewijst geen identiteit. Verifieer elke treffer bij de bron voordat er een beslissing op wordt gebaseerd.",
+    "name_only_matches_included": false
+   },
+   "disclaimer": "Weergave van het openbare Centraal Insolventieregister op het moment van bevraging. De Rechtspraak garandeert juistheid, volledigheid en beschikbaarheid niet. Dit is geen kredietoordeel."
+  },
+  "settledAmount": 0.15,
+  "settlementTx": "0x51712058301c3586eef7a955249ca57f30818eaf85b1473cb766d98501629e63",
+  "settlementBlock": 50484250,
+  "settlementAttribution": "exact"
+ }
+]

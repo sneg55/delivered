@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Delivered — caller-observed delivery proof for paid x402 endpoints</title>
+<meta name="description" content="Delivered pays x402 endpoints as a real buyer and checks the response against the contract the seller itself published. Every verdict ships with its settlement transaction.">
+<meta property="og:title" content="Delivered">
+<meta property="og:description" content="Of 29 paid responses checkable against their own seller's contract, 10 violated it. Measured on Base mainnet with real USDC.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%232775CA'/%3E%3Cpath d='M8 17l5 5 11-12' stroke='%23fff' stroke-width='3.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..125,400..900&family=Public+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap top-in">
+    <div class="brand">
+      <svg width="24" height="24" viewBox="0 0 32 32"><rect width="32" height="32" rx="6" fill="#2775CA"/><path d="M8 17l5 5 11-12" stroke="#fff" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Delivered
+    </div>
+    <nav class="top-nav">
+      <a href="#ledger">Ledger</a>
+      <a href="#findings">Findings</a>
+      <a href="#sponsor">Sponsor gateway</a>
+      <a href="#verify">Verify it</a>
+      <a href="https://github.com/sneg55/delivered">GitHub</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+
+<section class="hero">
+  <p class="eyebrow">Caller-observed delivery proof for paid x402 endpoints</p>
+  <h1>Everyone measures the endpoint. Delivered measures <span class="money">the goods.</span></h1>
+  <p class="lede">Registries count settlements. Monitors probe the paywall. Nobody checks what a paying
+  caller actually receives, because checking costs money. Delivered <strong>pays as a real buyer</strong>, then holds the
+  response against the contract <strong>the seller itself published</strong>. Every verdict below ships with the
+  challenge, the response, and the on-chain settlement that proves it.</p>
+
+  <div class="exchange" aria-label="One real probe, reenacted">
+    <div class="frame f402">
+      <div class="frame-bar"><span class="st">HTTP/1.1 402</span><span>Payment Required</span></div>
+      <pre>POST /api/v1/x402/is-prime
+<span class="cm">api.delx.ai answers with its price and,
+in the same breath, its promise:</span>
+
+"outputSchema": {
+  "<span class="k">schema</span>":   { "type": "string"  },
+  "<span class="k">n</span>":        { "type": "integer" },
+  "<span class="k">is_prime</span>": { "type": "boolean" }
+}
+"amount": "1000"  <span class="cm">$0.001 USDC</span></pre>
+    </div>
+    <div class="frame fpay">
+      <div class="frame-bar"><span class="st">PAYMENT-SIGNATURE</span><span>EIP-3009, Base mainnet</span></div>
+      <pre>transferWithAuthorization {
+  value: <span class="k">1000</span>,
+  to:    seller,
+  nonce: 0x1f92…c4
+}
+<span class="cm">signed, submitted by facilitator,
+settled on-chain. Real money,
+delivered before the goods.</span></pre>
+    </div>
+    <div class="frame f200">
+      <div class="frame-bar"><span class="st">HTTP/1.1 200</span><span>OK · payment settled</span></div>
+      <pre>{
+  "<span class="hl">tool_name</span>": "util_is_prime",
+  "<span class="hl">result</span>": {
+    "schema": "delx/is-prime/v1",
+    "n": 97,
+    "is_prime": true
+  }
+}</pre>
+      <div class="frame-note">The answer is right. The shape is not the one published: every promised field sits <b>one level below</b> the promised path.</div>
+    </div>
+  </div>
+  <p class="punch">A caller reading the contract gets <code>response.is_prime → undefined</code>. HTTP 200, money settled, no error anywhere. Cost to find: $0.001.</p>
+
+  <div class="totals" role="table" aria-label="Measurement totals">
+    <table><tr>
+      <td><span class="n" id="t-attempts">46</span><span class="l">paid attempts</span></td>
+      <td><span class="n" id="t-delivered">33</span><span class="l">delivered (HTTP 200)</span></td>
+      <td><span class="n" id="t-checkable">29</span><span class="l">checkable vs contract</span></td>
+      <td><span class="n ok-n" id="t-conforms">19</span><span class="l">conforms · 65.5%</span></td>
+      <td><span class="n bad-n" id="t-violations">10</span><span class="l">violations · 34.5%</span></td>
+      <td><span class="n usdc-n">$1.292925</span><span class="l">settled, on-chain</span></td>
+    </tr></table>
+  </div>
+  <p class="totals-cap">Base mainnet, 2026-08-26, 40 distinct hosts drawn from Coinbase's x402 discovery registry. Spend measured from the USDC Transfer log, never from quotes.</p>
+</section>
+
+<section id="ledger">
+  <p class="eyebrow">The ledger</p>
+  <h2>Every probe, every verdict, every receipt</h2>
+  <p class="sec-lede">Each row expands to the seller's declared contract, what came back, what was quoted
+  against what actually settled, and the settlement transaction on Basescan. Verdicts follow one rule:
+  only an HTTP 200 can be judged against a contract; a payment our client could not complete is our
+  failure and is never counted against a seller.</p>
+  <div class="filters" id="filters" role="group" aria-label="Filter by verdict"></div>
+  <div class="ledger" id="rows"></div>
+</section>
+
+<section id="findings">
+  <p class="eyebrow">What the money found</p>
+  <h2>Four findings, all paid for</h2>
+  <div class="findings">
+    <div class="finding"><span class="tag VIOLATION">VIOLATION</span>
+      <h3>9 of 10 violations are the same bug</h3>
+      <p>The promised fields exist, nested under a wrapper envelope like <code>{tool_name, result}</code>.
+      A caller reading the declared path gets <code>undefined</code> while correct data sits one level
+      down. A contract violation, not fraud, and invisible to every tool that stops at the paywall.</p>
+    </div>
+    <div class="finding"><span class="tag VIOLATION">PAID, NOT DELIVERED</span>
+      <h3>Two endpoints settled and returned nothing</h3>
+      <p>One took <a href="https://basescan.org/tx/0x7bad35035f575f00f5a6504436d680c2ab795c77b33327256ed722077c2dd632">$0.100 with a settlement receipt</a>,
+      then answered HTTP 422. Another settled $0.001 and answered HTTP 500. The money moved; nothing came
+      back; x402 has no recovery path. Other sellers hit with the same bad input refused without charging,
+      so the correct behaviour exists. It is not universal.</p>
+    </div>
+    <div class="finding"><span class="tag UNCHECKABLE">CLIENT SIDE</span>
+      <h3>The buyer's toolchain is broken too</h3>
+      <p>The official <code>x402-fetch</code> cannot pay v2 sellers at all. A v2 payload under the legacy
+      <code>X-PAYMENT</code> header is rejected by 13 of 46. Sending both header names reaches all but
+      one. Three runs, three interop states, each discovered with real money and reproduced in the
+      measurement log.</p>
+    </div>
+    <div class="finding"><span class="tag CONFORMS">QUOTES</span>
+      <h3>What you are charged is not what you were quoted</h3>
+      <p>Settled amounts drift from listed prices; some sellers deliver and charge nothing; a caller-side
+      ledger built from quoted prices misses reality badly. Delivered records quoted, live,
+      and settled amounts as three separate fields and trusts only the transfer log.</p>
+    </div>
+  </div>
+</section>
+
+<section id="sponsor">
+  <p class="eyebrow">No exceptions</p>
+  <h2>The sponsor's gateway, measured like any other seller</h2>
+  <div class="orion">
+    <p>Orion Agents runs an x402 reputation gateway with a discount for attested agents
+    (<code>X-ORION-ATTESTATION</code>, $0.05 standard, $0.02 attested). Delivered probed it the way it
+    probes everyone, on 2026-08-26:</p>
+    <ul>
+      <li>The attestation endpoint returned <em>not found</em> for every key that exists, including all
+      three agents minted and attested on-chain in the <code>AgentBound</code> contract, so the
+      discounted rate was unobtainable by any caller that day.</li>
+      <li>The premium endpoint accepted a valid v2 payment and answered HTTP 500, under both accepted
+      header names.</li>
+      <li>It charged nothing either time, verified against the transfer log. Correct refusal behaviour,
+      credited as such.</li>
+    </ul>
+    <p>A contract violation is a mismatch, never an accusation. Full evidence in
+    <a href="https://github.com/sneg55/delivered/blob/main/evidence/orion-gateway-2026-08-26.json">evidence/orion-gateway-2026-08-26.json</a>.</p>
+  </div>
+</section>
+
+<section id="verify" class="verify">
+  <p class="eyebrow">Trust nothing here</p>
+  <h2>Reproduce it yourself</h2>
+  <p class="sec-lede">The prober, the conformance checker, and the reconciliation are open source. The
+  unpaid tier runs from a fresh clone with no wallet and no money at risk.</p>
+  <pre>git clone https://github.com/sneg55/delivered && cd delivered
+npm install
+npm test                              <span class="cm"># 46 tests, no wallet, no network</span>
+node src/fetch-registry.mjs           <span class="cm"># pull the live x402 registry (~15k listings)</span>
+node src/build-targets.mjs 24
+node src/probe.mjs targets.json --no-pay   <span class="cm"># read live 402 challenges, spend nothing</span></pre>
+  <p class="small">The paid tier needs a funded throwaway wallet and enforces hard spend caps in code
+  before any signature: $0.15 per call, $5 per run, price read from the live challenge and never from
+  the listing. Every figure on this page regenerates from <code>evidence/results.json</code> in the repo.</p>
+</section>
+
+</div>
+
+<footer>
+  <div class="wrap" style="display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:0 24px">
+    <span>Delivered · measured 2026-08-26 on Base mainnet · wallet <a href="https://basescan.org/address/0xc3Dd3dEe328831fe12F259Fa20725c2Ce312BF3D">0xc3Dd…BF3D</a></span>
+    <span><a href="https://github.com/sneg55/delivered">Source &amp; methodology</a> · built for the Orion Builder Hackathon</span>
+  </div>
+</footer>
+
+<script src="app.js" defer></script>
+</body>
+</html>

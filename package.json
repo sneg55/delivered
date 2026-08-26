@@ -1,0 +1,26 @@
+{
+  "name": "delivered",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "description": "Caller-observed delivery proof for paid x402 endpoints",
+  "scripts": {
+    "test": "node --test \"test/*.test.mjs\"",
+    "registry": "node src/fetch-registry.mjs",
+    "targets": "node src/build-targets.mjs",
+    "probe": "node src/probe.mjs targets.json",
+    "probe:dry": "node src/probe.mjs targets.json --no-pay",
+    "reclassify": "node src/reclassify.mjs",
+    "registry-shape": "node src/schema-shape.mjs",
+    "network-split": "node src/network-format.mjs",
+    "reconcile": "node src/reconcile.mjs",
+    "backfill-payto": "node src/backfill-payto.mjs"
+  },
+  "dependencies": {
+    "viem": "2.55.19"
+  },
+  "devDependencies": {
+    "x402": "1.2.0",
+    "x402-fetch": "1.2.0"
+  }
+}

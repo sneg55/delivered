@@ -1,0 +1,1275 @@
+[
+ {
+  "url": "https://keyronne.com/api/color",
+  "listedPrice": 0.001,
+  "livePrice": 0.001,
+  "drift": false,
+  "charged": 0,
+  "quotedVsCharged": "QUOTED $0.001, CHARGED NOTHING (no data returned either)",
+  "x402Version": 2,
+  "httpStatus": 402,
+  "bytes": 720,
+  "settled": false,
+  "receiptState": "NO RECEIPT HEADER",
+  "txHash": null,
+  "contractKind": "registry example object",
+  "declaredFields": [
+   "contrast:object",
+   "hex:string",
+   "hsl:object",
+   "input:string",
+   "luminance:number",
+   "rgb:object"
+  ],
+  "verdict": "VIOLATION",
+  "detail": "missing required: contrast, hex, hsl, input, luminance, rgb",
+  "extraKeys": [
+   "x402Version",
+   "accepts"
+  ],
+  "semantic": null,
+  "nesting": null,
+  "body": {
+   "x402Version": 1,
+   "accepts": [
+    {
+     "scheme": "exact",
+     "network": "base",
+     "amount": "1000",
+     "asset": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+     "payTo": "0xB86F95EF5FA904318Ea9Df3b59AdCe099b478fC4",
+     "maxTimeoutSeconds": 60,
+     "extra": {
+      "name": "USD Coin",
+      "version": "2"
+     },
+     "maxAmountRequired": "1000",
+     "resource": "https://keyronne.com/api/color",
+     "description": "Parse any CSS color (hex, rgb(), hsl()) and emit all three formats plus relative luminance. Compute WCAG contrast ratios against a background with AA/AAA pass-fail for normal and large text, and lighten, darken, or mix colors. Built for agents generating accessible UI themes. POST a JSON body like: {\"color\":\"#3498db\",\"background\":\"#ffffff\"}",
+     "mimeType": "application/json"
+    }
+   ]
+  }
+ },
+ {
+  "url": "https://finance.payapi.market/mortgage-calculator",
+  "listedPrice": 0.001,
+  "livePrice": 0.001,
+  "drift": false,
+  "charged": 0,
+  "quotedVsCharged": "QUOTED $0.001, CHARGED NOTHING (no data returned either)",
+  "x402Version": 2,
+  "httpStatus": 402,
+  "bytes": 67,
+  "settled": false,
+  "receiptState": "NO RECEIPT HEADER",
+  "txHash": null,
+  "contractKind": "registry example object",
+  "declaredFields": [
+   "annual_cost:number",
+   "deposit:number",
+   "interest_rate:number",
+   "loan_amount:number",
+   "ltv_percent:number",
+   "monthly_payment:number",
+   "property_price:number",
+   "term_years:number",
+   "total_interest:number",
+   "total_paid:number",
+   "type:string"
+  ],
+  "verdict": "VIOLATION",
+  "detail": "missing required: annual_cost, deposit, interest_rate, loan_amount, ltv_percent, monthly_payment, property_price, term_years, total_interest, total_paid, type",
+  "extraKeys": [
+   "error",
+   "detail"
+  ],
+  "semantic": null,
+  "nesting": null,
+  "body": {
+   "error": "payment_invalid",
+   "detail": "Payment verification failed."
+  }
+ },
+ {
+  "url": "https://property.payapi.market/sold-prices",
+  "listedPrice": 0.001,
+  "livePrice": 0.001,
+  "drift": false,
+  "charged": 0,
+  "quotedVsCharged": "QUOTED $0.001, CHARGED NOTHING (no data returned either)",
+  "x402Version": 2,
+  "httpStatus": 402,
+  "bytes": 67,
+  "settled": false,
+  "receiptState": "NO RECEIPT HEADER",
+  "txHash": null,
+  "contractKind": "registry example object",
+  "declaredFields": [
+   "cached:boolean",
+   "count:number",
+   "postcode:string",
+   "results:array"
+  ],
+  "verdict": "VIOLATION",
+  "detail": "missing required: cached, count, postcode, results",
+  "extraKeys": [
+   "error",
+   "detail"
+  ],
+  "semantic": null,
+  "nesting": null,
+  "body": {
+   "error": "payment_invalid",
+   "detail": "Payment verification failed."
+  }
+ },
+ {
+  "url": "https://api.delx.ai/api/v1/x402/caa-issue-hosts",
+  "listedPrice": 0.001,
+  "livePrice": 0.001,
+  "drift": false,
+  "charged": 0,
+  "quotedVsCharged": "QUOTED $0.001, CHARGED NOTHING (no data returned either)",
+  "x402Version": 2,
+  "httpStatus": 200,
+  "bytes": 119,
+  "settled": false,
+  "receiptState": "NO RECEIPT HEADER",
+  "txHash": null,
+  "contractKind": "inline JSON Schema (from live challenge)",
+  "declaredFields": [
+   "schema:string",
+   "hosts:array"
+  ],
+  "verdict": "VIOLATION",
+  "detail": "missing required: schema, hosts",
+  "extraKeys": [
+   "tool_name",
+   "result"
+  ],
+  "semantic": null,
+  "nesting": "all declared fields DO exist, nested below the declared level: schema, hosts. A caller reading them at the declared path gets undefined.",
+  "body": {
+   "tool_name": "util_caa_issue_hosts",
+   "result": {
+    "schema": "delx/util-caa-issue-hosts/v1",
+    "hosts": [
+     "letsencrypt.org",
+     ";"
+    ]
+   }
+  }
+ },
+ {
+  "url": "https://api.delx.ai/api/v1/x402/hex-to-int",
+  "listedPrice": 0.001,
+  "livePrice": 0.001,
+  "drift": false,
+  "charged": 0.001,
+  "quotedVsCharged": "matches quote",
+  "x402Version": 2,
+  "httpStatus": 200,
+  "bytes": 104,
+  "settled": false,
+  "receiptState": "NO RECEIPT HEADER",
+  "txHash": null,
+  "contractKind": "inline JSON Schema (from live challenge)",
+  "declaredFields": [
+   "schema:string",
+   "hex:string",
+   "value:string"
+  ],
+  "verdict": "VIOLATION",
+  "detail": "missing required: schema, hex, value",
+  "extraKeys": [
+   "tool_name",
+   "result"
+  ],
+  "semantic": null,
+  "nesting": "all declared fields DO exist, nested below the declared level: schema, hex, value. A caller reading them at the declared path gets undefined.",
+  "body": {
+   "tool_name": "util_hex_to_int",
+   "result": {
+    "schema": "delx/util-hex-to-int/v1",
+    "hex": "0xff",
+    "value": "255"
+   }
+  }
+ },
+ {
+  "url": "https://web-production-18a32.up.railway.app/current-weather",
+  "listedPrice": 0.001,
+  "livePrice": 0.001,
+  "drift": false,
+  "charged": 0,
+  "quotedVsCharged": "QUOTED $0.001, CHARGED NOTHING (no data returned either)",
+  "x402Version": 2,
+  "httpStatus": 402,
+  "bytes": 67,
+  "settled": false,
+  "receiptState": "NO RECEIPT HEADER",
+  "txHash": null,
+  "contractKind": "registry example object",
+  "declaredFields": [
+   "current:object",
+   "location:object"
+  ],
+  "verdict": "VIOLATION",
+  "detail": "missing required: current, location",
+  "extraKeys": [
+   "error",
+   "detail"
+  ],
+  "semantic": null,
+  "nesting": null,
+  "body": {
+   "error": "payment_invalid",
+   "detail": "Payment verification failed."
+  }
+ },
+ {
+  "url": "https://x402.shizu.me/gw/coingecko",
+  "listedPrice": 0.002,
+  "livePrice": 0.002,
+  "drift": false,
+  "charged": 0,
+  "quotedVsCharged": "QUOTED $0.002, CHARGED NOTHING (no data returned either)",
+  "x402Version": 1,
+  "httpStatus": 400,
+  "bytes": 155,
+  "settled": false,
+  "receiptState": "NO RECEIPT HEADER",
+  "txHash": null,
+  "contractKind": "registry example object",
+  "declaredFields": [
+   "data:object",
+   "path:string",
+   "upstream:string"
+  ],
+  "verdict": "VIOLATION",
+  "detail": "missing required: data, path, upstream",
+  "extraKeys": [
+   "error",
+   "price",
+   "example_query",
+   "catalog"
+  ],
+  "semantic": null,
+  "nesting": "all declared fields DO exist, nested below the declared level: path. A caller reading them at the declared path gets undefined.",
+  "body": {
+   "error": "path must match ^/[A-Za-z0-9/_-.]*$",
+   "price": "$0.002",
+   "example_query": {
+    "path": "/ping",
+    "q": ""
+   },
+   "catalog": "https://x402.shizu.me/.well-known/x402"
+  }
+ },
+ {
+  "url": "https://library.forgemesh.io/human-alien-encounters-fiction",
+  "listedPrice": 0.003,
+  "livePrice": 0.003,
+  "drift": false,
+  "charged": 0.003,
+  "quotedVsCharged": "matches quote",
+  "x402Version": 1,
+  "httpStatus": 200,
+  "bytes": 1947,
+  "settled": true,
+  "receiptState": "receipt returned",
+  "txHash": "0x2a7e914638c13f35c20e0e88c05ea957985dc847d1a45a12f6199289a33ea2f2",
+  "contractKind": "registry example object",
+  "declaredFields": [
+   "books:array",
+   "count:number",
+   "coverage:object",
+   "drill_down:array",
+   "shelf:string"
+  ],
+  "verdict": "CONFORMS",
+  "detail": "5 declared field(s) present, types match",
+  "extraKeys": [
+   "meta",
+   "provider"
+  ],
+  "semantic": null,
+  "nesting": null,
+  "body": {
+   "shelf": "Human-alien encounters -- Fiction",
+   "count": 5,
+   "coverage": {
+    "indexed": 61015,
+    "target": 61994
+   },
+   "books": [
+    {
+     "book_id": 20782,
+     "title": "Triplanetary",
+     "author": "Smith, E. E. (Edward Elmer)",
+     "year": "2007",
+     "download_count": 18723,
+     "subjects": [
+      "Science fiction",
+      "Extraterrestrial beings -- Fiction",
+      "Human-alien encounters -- Fiction",
+      "PS"
+     ]
+    },
+    {
+     "book_id": 76849,
+     "title": "This star shall be free",
+     "author": "Leinster, Murray",
+     "year": "2025",
+     "download_count": 11699,
+     "subjects": [
+      "Science fiction",
+      "Short stories",
+      "Human-alien encounters -- Fiction",
+      "Prehistoric peoples -- Fiction"
+     ]
+    },
+    {
+     "book_id": 27400,
+     "title": "The Martian: A Novel",
+     "author": "Du Maurier, George",
+     "year": "2008",
+     "download_count": 9160,
+     "subjects": [
+      "Authors -- Fiction",
+      "Young men -- Fiction",
+      "Paris (France) -- Fiction",
+      "Martians -- Fiction"
+     ]
+    },
+    {
+     "book_id": 2509,
+     "title": "The Lani People",
+     "author": "Bone, Jesse F. (Jesse Franklin)",
+     "year": "2001",
+     "download_count": 1457,
+     "subjects": [
+      "Science fiction",
+      "Human-alien encounters -- Fiction",
+      "PS"
+     ]
+    },
+    {
+     "book_id": 68236,
+     "title": "The colour out of space",
+     "author": "Lovecraft, H. P. (Howard Phillips)",
+     "year": "2022",
+     "download_count": 1415,
+     "subjects": [
+      "Science fiction",
+      "Horror tales",
+      "Extraterrestrial beings -- Fiction",
+      "Human-alien encounters -- Fiction"
+     ]
+    }
+   ],
+   "drill_down": [
+    "/book-metadata",
+    "/book-chapter",
+    "/book-quotes",
+    "/literature-search"
+   ],
+   "meta": {
+    "endpoint": "/human-alien-encounters-fiction",
+    "price": "$0.003",
+    "fetchedAt": "2026-08-26T13:47:54.601Z",
+    "related": [
+     "/book-search",
+     "/literature-search"
+    ],
+    "catalog": "/openapi.json"
+   },
+   "provider": {
+    "name": "ForgeMesh Labs",
+    "catalog": "POST https://x402.forgemesh.io/agent-service-directory ($0.05)",
+    "fleet": "12 x402 services and counting, 500+ paid endpoints, from $0.001 — one wallet, no signup, atomic USDC settlement on Base. Free index: https://x402.forgemesh.io/llms.txt",
+    "card": "Soulbound Reader's Card (ERC-721 on Base) minted to the paying wallet: POST https://library.forgemesh.io/library-card ($0.001, one per wallet)"
+   }
+  }
+ },
+ {
+  "url": "https://library.forgemesh.io/holmes-sherlock-fictitious-character-fiction",
+  "listedPrice": 0.003,
+  "livePrice": 0.003,
+  "drift": false,
+  "charged": 0,
+  "quotedVsCharged": "QUOTED $0.003, CHARGED NOTHING (no data returned either)",
+  "x402Version": 1,
+  "httpStatus": 200,
+  "bytes": 2285,
+  "settled": true,
+  "receiptState": "receipt returned",
+  "txHash": "0x95ed63e55275f1c7e0f3223875af8e69c1b24d30e7464b0e11112d692c9952e7",
+  "contractKind": "registry example object",
+  "declaredFields": [
+   "books:array",
+   "count:number",
+   "coverage:object",
+   "drill_down:array",
+   "shelf:string"
+  ],
+  "verdict": "CONFORMS",
+  "detail": "5 declared field(s) present, types match",
+  "extraKeys": [
+   "meta",
+   "provider"
+  ],
+  "semantic": null,
+  "nesting": null,
+  "body": {
+   "shelf": "Holmes, Sherlock (Fictitious character) -- Fiction",
+   "count": 5,
+   "coverage": {
+    "indexed": 61015,
+    "target": 61994
+   },
+   "books": [
+    {
+     "book_id": 1661,
+     "title": "The Adventures of Sherlock Holmes",
+     "author": "Doyle, Arthur Conan",
+     "year": "1999",
+     "download_count": 70250,
+     "subjects": [
+      "Holmes, Sherlock (Fictitious character) -- Fiction",
+      "Private investigators -- England -- Fiction",
+      "Detective and mystery stories, English",
+      "PR"
+     ]
+    },
+    {
+     "book_id": 69700,
+     "title": "The case-book of Sherlock Holmes",
+     "author": "Doyle, Arthur Conan",
+     "year": "2023",
+     "download_count": 52954,
+     "subjects": [
+      "Holmes, Sherlock (Fictitious character) -- Fiction",
+      "Private investigators -- England -- Fiction",
+      "Detective and mystery stories, English",
+      "PR"
+     ]
+    },
+    {
+     "book_id": 48320,
+     "title": "Adventures of Sherlock Holmes Illustrated",
+     "author": "Doyle, Arthur Conan",
+     "year": "2015",
+     "download_count": 42498,
+     "subjects": [
+      "Holmes, Sherlock (Fictitious character) -- Fiction",
+      "Private investigators -- England -- Fiction",
+      "Detective and mystery stories, English",
+      "PR"
+     ]
+    },
+    {
+     "book_id": 244,
+     "title": "A Study in Scarlet",
+     "author": "Doyle, Arthur Conan",
+     "year": "1995",
+     "download_count": 39510,
+     "subjects": [
+      "Holmes, Sherlock (Fictitious character) -- Fiction",
+      "Private investigators -- England -- Fiction",
+      "Detective and mystery stories",
+      "England -- Fiction"
+     ]
+    },
+    {
+     "book_id": 2852,
+     "title": "The Hound of the Baskervilles",
+     "author": "Doyle, Arthur Conan",
+     "year": "2001",
+     "download_count": 38780,
+     "subjects": [
+      "Holmes, Sherlock (Fictitious character) -- Fiction",
+      "Private investigators -- England -- Fiction",
+      "Dogs -- Fiction",
+      "Detective and mystery stories"
+     ]
+    }
+   ],
+   "drill_down": [
+    "/book-metadata",
+    "/book-chapter",
+    "/book-quotes",
+    "/literature-search"
+   ],
+   "meta": {
+    "endpoint": "/holmes-sherlock-fictitious-character-fiction",
+    "price": "$0.003",
+    "fetchedAt": "2026-08-26T13:48:01.727Z",
+    "related": [
+     "/book-search",
+     "/literature-search"
+    ],
+    "catalog": "/openapi.json"
+   },
+   "provider": {
+    "name": "ForgeMesh Labs",
+    "catalog": "POST https://x402.forgemesh.io/agent-service-directory ($0.05)",
+    "fleet": "12 x402 services and counting, 500+ paid endpoints, from $0.001 — one wallet, no signup, atomic USDC settlement on Base. Free index: https://x402.forgemesh.io/llms.txt",
+    "card": "Soulbound Reader's Card (ERC-721 on Base) minted to the paying wallet: POST https://library.forgemesh.io/library-card ($0.001, one per wallet)"
+   }
+  }
+ },
+ {
+  "url": "https://api.glianalabs.com/x402/gemini-3.5-flash-lite",
+  "listedPrice": 0.003334,
+  "livePrice": 0.003334,
+  "drift": false,
+  "charged": 0.003,
+  "quotedVsCharged": "QUOTED $0.003334, CHARGED $0.003",
+  "x402Version": 1,
+  "httpStatus": 402,
+  "bytes": 576,
+  "settled": false,
+  "receiptState": "NO RECEIPT HEADER",
+  "txHash": null,
+  "contractKind": "registry example object",
+  "declaredFields": [
+   "model:string",
+   "output:object"
+  ],
+  "verdict": "VIOLATION",
+  "detail": "missing required: model, output",
+  "extraKeys": [
+   "x402Version",
+   "accepts"
+  ],
+  "semantic": null,
+  "nesting": null,
+  "body": {
+   "x402Version": 1,
+   "accepts": [
+    {
+     "scheme": "exact",
+     "network": "base",
+     "maxAmountRequired": "3334",
+     "resource": "https://api.glianalabs.com/x402/gemini-3.5-flash-lite",
+     "description": "GlianaAI - pay-per-call AI: LLM chat (OpenAI-compatible), image, video, music, speech - 90+ models, no signup, USDC. This resource: gemini-3.5-flash-lite (Text Generation). https://ai.glianalabs.com",
+     "mimeType": "application/json",
+     "payTo": "0x7662E00f8Ab4C362166e1FF649Ff6c2A638c80AD",
+     "maxTimeoutSeconds": 300,
+     "asset": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+     "extra": {
+      "name": "USD Coin",
+      "version": "2"
+     }
+    }
+   ]
+  }
+ },
+ {
+  "url": "https://x402.aispace.bot/api/v1/augment/search",
+  "listedPrice": 0.005,
+  "livePrice": 0.005,
+  "drift": false,
+  "charged": null,
+  "quotedVsCharged": "charge unknown (RPC unavailable)",
+  "x402Version": 2,
+  "httpStatus": 402,
+  "bytes": 550,
+  "settled": false,
+  "receiptState": "NO RECEIPT HEADER",
+  "txHash": null,
+  "contractKind": "registry example object",
+  "declaredFields": [
+   "query:string",
+   "results:array"
+  ],
+  "verdict": "VIOLATION",
+  "detail": "missing required: query, results",
+  "extraKeys": [
+   "x402Version",
+   "accepts"
+  ],
+  "semantic": null,
+  "nesting": null,
+  "body": {
+   "x402Version": 1,
+   "accepts": [
+    {
+     "scheme": "exact",
+     "network": "base",
+     "asset": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+     "amount": "5000",
+     "payTo": "0xA7f3Ad0E69F61864092FAbBa6Cee00AF6e584689",
+     "maxTimeoutSeconds": 300,
+     "extra": {
+      "name": "USD Coin",
+      "version": "2"
+     },
+     "maxAmountRequired": "5000",
+     "resource": "https://x402.aispace.bot/api/v1/augment/search",
+     "description": "Web search for agent pipelines on Venice — ranked results for a query, paid per request in USDC on Base via x402, no API key. Standalone; no model lookup required.",
+     "mimeType": "application/json"
+    }
+   ]
+  }
+ },
+ {
+  "url": "https://energy.halowerk.com/optimizer/cheapest-window",
+  "listedPrice": 0.005,
+  "livePrice": 0.005,
+  "drift": false,
+  "charged": 0,
+  "quotedVsCharged": "QUOTED $0.005, CHARGED NOTHING (no data returned either)",
+  "x402Version": 2,
+  "httpStatus": 402,
+  "bytes": 734,
+  "settled": false,
+  "receiptState": "NO RECEIPT HEADER",
+  "txHash": null,
+  "contractKind": "registry example object",
+  "declaredFields": [
+   "action:string",
+   "avg_price_ct_kwh:string",
+   "best_end:string",
+   "best_start:string",
+   "day_avg_ct_kwh:string",
+   "duration_hours:number",
+   "savings_vs_avg_pct:string",
+   "source:string",
+   "timestamp:string",
+   "window:array"
+  ],
+  "verdict": "VIOLATION",
+  "detail": "missing required: action, avg_price_ct_kwh, best_end, best_start, day_avg_ct_kwh, duration_hours, savings_vs_avg_pct, source, timestamp, window",
+  "extraKeys": [
+   "x402Version",
+   "accepts"
+  ],
+  "semantic": null,
+  "nesting": null,
+  "body": {
+   "x402Version": 1,
+   "accepts": [
+    {
+     "scheme": "exact",
+     "network": "base",
+     "amount": "5000",
+     "asset": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+     "payTo": "0x2880EdfFF13100677Bf97A3CBdF3Bc34771C4E5E",
+     "maxTimeoutSeconds": 300,
+     "extra": {
+      "asset": "USDC",
+      "network_name": "Base Mainnet",
+      "name": "USD Coin",
+      "decimals": 6,
+      "assetTransferMethod": "eip3009",
+      "version": "2",
+      "eip712Domain": {
+       "name": "USD Coin",
+       "version": "2",
+       "chainId": 8453,
+       "verifyingContract": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913"
+      }
+     },
+     "maxAmountRequired": "5000",
+     "resource": "https://energy.halowerk.com/optimizer/cheapest-window",
+     "description": "Flexible-load agents buy this endpoint to schedule a contiguous operating window at the lowest average electricity price.",
+     "mimeType": "application/json"
+    }
+   ]
+  }
+ },
+ {
+  "url": "https://voice.forgemesh.io/v1/tts/custom",
+  "listedPrice": 0.005,
+  "livePrice": 0.005,
+  "drift": false,
+  "charged": 0,
+  "quotedVsCharged": "QUOTED $0.005, CHARGED NOTHING (no data returned either)",
+  "x402Version": 1,
+  "httpStatus": 200,
+  "bytes": 122466,
+  "settled": true,
+  "receiptState": "receipt returned",
+  "txHash": "0xb9e8b42d8330409d349f6331023f87924b267f3651aed3a6d19a899dd70e545f",
+  "contractKind": "registry example object",
+  "declaredFields": [
+   "content_type:string",
+   "description:string"
+  ],
+  "verdict": "VIOLATION",
+  "detail": "response was not JSON",
+  "extraKeys": [],
+  "semantic": null,
+  "nesting": null,
+  "body": "RIFF$�\u0001\u0000WAVEfmt \u0010\u0000\u0000\u0000\u0001\u0000\u0001\u0000D�\u0000\u0000�X\u0001\u0000\u0002\u0000\u0010\u0000data\u0000�\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000����\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000��\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000��\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000��\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000��\u0000\u0000\u0000\u0000��\u0000\u0000����\u0000\u0000\u0000\u0000\u0000\u0000������������\u0000\u0000����\u0000\u0000\u0000\u0000����\u0000\u0000����\u0000\u0000\u0000\u0000\u0000\u0000��\u0000\u0000\u0000\u0000��\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000��\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000��\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000��\u0000\u0000\u0000\u0000��\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000��"
+ },
+ {
+  "url": "https://api.magentlab.com/api/calc/killip",
+  "listedPrice": 0.005,
+  "livePrice": 0.007,
+  "drift": true,
+  "charged": 0,
+  "quotedVsCharged": "QUOTED $0.007, CHARGED NOTHING (no data returned either)",
+  "x402Version": 2,
+  "httpStatus": 402,
+  "bytes": 945,
+  "settled": false,
+  "receiptState": "NO RECEIPT HEADER",
+  "txHash": null,
+  "contractKind": "registry example object",
+  "declaredFields": [
+   "count:number",
+   "items:array",
+   "path:string"
+  ],
+  "verdict": "VIOLATION",
+  "detail": "missing required: count, items, path",
+  "extraKeys": [
+   "x402Version",
+   "accepts"
+  ],
+  "semantic": null,
+  "nesting": null,
+  "body": {
+   "x402Version": 1,
+   "accepts": [
+    {
+     "amount": "7000",
+     "asset": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+     "extra": {
+      "assetTransferMethod": "eip3009",
+      "name": "USD Coin",
+      "paymentFlow": "upfront",
+      "resourceUrl": "https://api.magentlab.com/api/calc/killip?n=2&body_sha256=7856b37866b5e04a66110997c23e76388b7ed017030a772475339763f6e653fe",
+      "version": "2"
+     },
+     "maxTimeoutSeconds": 600,
+     "network": "base",
+     "payTo": "0x836Be278f1739fB4308091cD1852F7971Bc19Ee2",
+     "scheme": "exact",
+     "maxAmountRequired": "7000",
+     "resource": "https://api.magentlab.com/api/calc/killip",
+     "description": "Killip and Kimball 1967 myocardial-infarction heart-failure class 1-4 as assigned by the caller. Returns the published class, description (no heart failure; S3 and basilar rales; pulmonary edema; cardiogenic shock), and 1967 CCU hospital mortality (6%, 17%, 38%, 81%). Not a diagnosis; magent does not examine the patient. Not GRACE or contemporary registry mortality.",
+     "mimeType": "application/json"
+    }
+   ]
+  }
+ },
+ {
+  "url": "https://api.magentlab.com/api/calc/pf_ratio",
+  "listedPrice": 0.005,
+  "livePrice": 0.007,
+  "drift": true,
+  "charged": 0,
+  "quotedVsCharged": "QUOTED $0.007, CHARGED NOTHING (no data returned either)",
+  "x402Version": 2,
+  "httpStatus": 402,
+  "bytes": 826,
+  "settled": false,
+  "receiptState": "NO RECEIPT HEADER",
+  "txHash": null,
+  "contractKind": "registry example object",
+  "declaredFields": [
+   "count:number",
+   "items:array",
+   "path:string"
+  ],
+  "verdict": "VIOLATION",
+  "detail": "missing required: count, items, path",
+  "extraKeys": [
+   "x402Version",
+   "accepts"
+  ],
+  "semantic": null,
+  "nesting": null,
+  "body": {
+   "x402Version": 1,
+   "accepts": [
+    {
+     "amount": "7000",
+     "asset": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+     "extra": {
+      "assetTransferMethod": "eip3009",
+      "name": "USD Coin",
+      "paymentFlow": "upfront",
+      "resourceUrl": "https://api.magentlab.com/api/calc/pf_ratio?n=2&body_sha256=28d88df5735470ad76b913a1fd54a2f6001a01a9484a82869b23da7218e2940f",
+      "version": "2"
+     },
+     "maxTimeoutSeconds": 600,
+     "network": "base",
+     "payTo": "0x836Be278f1739fB4308091cD1852F7971Bc19Ee2",
+     "scheme": "exact",
+     "maxAmountRequired": "7000",
+     "resource": "https://api.magentlab.com/api/calc/pf_ratio",
+     "description": "PaO2/FiO2 ratio as arterial PO2 in mm Hg divided by inspired oxygen as a fraction (0.21–1.0). Returns the ratio rounded to one decimal. Magent does not apply ARDS severity cutoffs, and this is not the oxygenation index (FiO2 × MAP × 100 / PaO2).",
+     "mimeType": "application/json"
+    }
+   ]
+  }
+ },
+ {
+  "url": "https://animica.dev/x402/security/injection",
+  "listedPrice": 0.005808,
+  "livePrice": 0.005894,
+  "drift": true,
+  "charged": 0.005894,
+  "quotedVsCharged": "matches quote",
+  "x402Version": 1,
+  "httpStatus": 200,
+  "bytes": 995,
+  "settled": true,
+  "receiptState": "receipt returned",
+  "txHash": "0x108602e7f9ee79018d46dd07dad0cc3bfc0baa8b5a4b63176b6f410086f30985",
+  "contractKind": "none",
+  "declaredFields": [],
+  "verdict": "UNCHECKABLE",
+  "detail": "seller published no output contract",
+  "extraKeys": [],
+  "semantic": null,
+  "nesting": null,
+  "body": {
+   "product": "injection_scan",
+   "risk": 0.8,
+   "verdict": "likely_injection",
+   "findings": [],
+   "pattern_hits": [
+    {
+     "technique": "instruction_override",
+     "span": "Ignore all previous instructions"
+    },
+    {
+     "technique": "exfiltration",
+     "span": "print your system prompt"
+    }
+   ],
+   "signals": {
+    "pattern_risk": 0.8,
+    "model_risk": 0,
+    "model_available": true,
+    "note": "pattern and model signals are reported separately and combined by MAX, so a blatant match cannot be argued down by the model, and a model finding is not hidden when no pattern matched."
+   },
+   "model": "anm-fast-8b",
+   "caveat": "Detection is best-effort on a small model plus fixed patterns. Treat a clean verdict as weak evidence, never as a guarantee — do not grant an agent new authority on the strength of it.",
+   "payment": {
+    "network": "eip155:8453",
+    "asset": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "amount_atomic": "5894",
+    "price_usd": "0.005894",
+    "payer": "0xc3Dd3dEe328831fe12F259Fa20725c2Ce312BF3D",
+    "settlement_tx": "0x108602e7f9ee79018d46dd07dad0cc3bfc0baa8b5a4b63176b6f410086f30985"
+   }
+  }
+ },
+ {
+  "url": "https://animica.dev/x402/chain/holders",
+  "listedPrice": 0.007,
+  "livePrice": 0.007073,
+  "drift": true,
+  "charged": 0.007073,
+  "quotedVsCharged": "matches quote",
+  "x402Version": 1,
+  "httpStatus": 200,
+  "bytes": 1482,
+  "settled": true,
+  "receiptState": "receipt returned",
+  "txHash": "0xafefcfda3ad0aeb32b9895f5b272e2e9b05d867de01b8f62118ae4d2c19f7e72",
+  "contractKind": "none",
+  "declaredFields": [],
+  "verdict": "UNCHECKABLE",
+  "detail": "seller published no output contract",
+  "extraKeys": [],
+  "semantic": null,
+  "nesting": null,
+  "body": {
+   "product": "holder_snapshot",
+   "as_of": {
+    "height": 84057,
+    "taken_at": "2026-08-26T13:48:55.711Z"
+   },
+   "total_addresses": 158,
+   "count": 3,
+   "requested_limit": 3,
+   "sum_of_returned_nanm": "72584462080796350",
+   "sum_of_returned_anm": "72584462.080796350",
+   "total_supply_nanm": "111645378741619869",
+   "holders": [
+    {
+     "rank": 1,
+     "address": "0xa4951bae612901371baef3148cd6f729f65107ea5649b6c4e1ae1cd691cc1723",
+     "balance_nanm": "40028624082111350",
+     "balance_anm": "40028624.082111350",
+     "share_of_returned_percent": 55.1476
+    },
+    {
+     "rank": 2,
+     "address": "0x4220d1b6e0fd08bdee888a43fec06171c265074ddaf1e2cb1352d1d611e8c353",
+     "balance_nanm": "22555833000000000",
+     "balance_anm": "22555833.000000000",
+     "share_of_returned_percent": 31.0752
+    },
+    {
+     "rank": 3,
+     "address": "0xe3a2975bdde095d76d661661d82404808ae35992b2a5d19536d9c5ff592c7558",
+     "balance_nanm": "10000004998685000",
+     "balance_anm": "10000004.998685000",
+     "share_of_returned_percent": 13.777
+    }
+   ],
+   "notes": {
+    "units": "balances are nANM (1e-9 ANM) as exact decimal strings — divide by 1e9 with a decimal library, never a float",
+    "share": "share_of_returned_percent is a share of the rows RETURNED, not of total supply; use total_supply_nanm if you want the latter",
+    "addresses": "addresses are 32-byte account digests as returned by the node"
+   },
+   "payment": {
+    "network": "eip155:8453",
+    "asset": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "amount_atomic": "7073",
+    "price_usd": "0.007073",
+    "payer": "0xc3Dd3dEe328831fe12F259Fa20725c2Ce312BF3D",
+    "settlement_tx": "0xafefcfda3ad0aeb32b9895f5b272e2e9b05d867de01b8f62118ae4d2c19f7e72"
+   }
+  }
+ },
+ {
+  "url": "https://aeml-x402.zeabur.app/mcp/server",
+  "listedPrice": 0.01,
+  "livePrice": 0.01,
+  "drift": false,
+  "charged": 0,
+  "quotedVsCharged": "QUOTED $0.01, CHARGED NOTHING (no data returned either)",
+  "x402Version": 1,
+  "httpStatus": 422,
+  "bytes": 374,
+  "settled": false,
+  "receiptState": "NO RECEIPT HEADER",
+  "txHash": null,
+  "contractKind": "none",
+  "declaredFields": [],
+  "verdict": "UNCHECKABLE",
+  "detail": "seller published no output contract",
+  "extraKeys": [],
+  "semantic": null,
+  "nesting": null,
+  "body": {
+   "error": "Missing required query parameter(s): name. Not charged. A request you can run right now: GET /mcp/server?name=0580iris-lang-x711\nFull list of legal values (free): /mcp/preview",
+   "no_charge": true,
+   "miss": "missing_parameter",
+   "missing_params": [
+    "name"
+   ],
+   "usage": "/mcp/server?name=<value>",
+   "example_request": "/mcp/server?name=0580iris-lang-x711",
+   "preview": "/mcp/preview"
+  }
+ },
+ {
+  "url": "https://api.invoket.com/weather/forecast",
+  "listedPrice": 0.01,
+  "livePrice": 0.01,
+  "drift": false,
+  "charged": 0,
+  "quotedVsCharged": "QUOTED $0.01, CHARGED NOTHING (no data returned either)",
+  "x402Version": 2,
+  "httpStatus": 402,
+  "bytes": 1014,
+  "settled": false,
+  "receiptState": "NO RECEIPT HEADER",
+  "txHash": null,
+  "contractKind": "registry example object",
+  "declaredFields": [
+   "data:object",
+   "provenance:object"
+  ],
+  "verdict": "VIOLATION",
+  "detail": "missing required: data, provenance",
+  "extraKeys": [
+   "x402Version",
+   "accepts"
+  ],
+  "semantic": null,
+  "nesting": null,
+  "body": {
+   "x402Version": 1,
+   "accepts": [
+    {
+     "scheme": "exact",
+     "network": "base",
+     "amount": "10000",
+     "asset": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+     "payTo": "0x4465825B0ac713aA2Fa07Ea29023020804A128ee",
+     "maxTimeoutSeconds": 60,
+     "extra": {
+      "name": "USD Coin",
+      "version": "2"
+     },
+     "maxAmountRequired": "10000",
+     "resource": "https://api.invoket.com/weather/forecast",
+     "description": "Before your agent schedules a delivery, plans outdoor work or hedges short-term weather exposure: a point forecast of 2 m temperature, precipitation and 10 m wind — plus opt-in convective, humidity, cloud and snow variables — for any GPS point or city. Deterministic NOAA GFS at 0.25 deg to 16 days (384 h), NOAA GEFS ensemble mean at 0.5 deg to 35 days (840 h) — beyond 16 days the value is an ensemble mean with smoothed extremes: trend, not threshold triggers. The lead selector is optional (omitted, the forecast defaults to the current analysis time) and the response names the model that served it and the exact forecast step.",
+     "mimeType": "application/json"
+    }
+   ]
+  }
+ },
+ {
+  "url": "https://api.printmoneylab.com/api/v1/exchange-alerts",
+  "listedPrice": 0.01,
+  "livePrice": 0.01,
+  "drift": false,
+  "charged": 0,
+  "quotedVsCharged": "QUOTED $0.01, CHARGED NOTHING (no data returned either)",
+  "x402Version": 2,
+  "httpStatus": 402,
+  "bytes": 545,
+  "settled": false,
+  "receiptState": "NO RECEIPT HEADER",
+  "txHash": null,
+  "contractKind": "registry example object",
+  "declaredFields": [
+   "caution_tokens:array",
+   "listing_changes:array",
+   "meta:object"
+  ],
+  "verdict": "VIOLATION",
+  "detail": "missing required: caution_tokens, listing_changes, meta",
+  "extraKeys": [
+   "x402Version",
+   "accepts"
+  ],
+  "semantic": null,
+  "nesting": null,
+  "body": {
+   "x402Version": 1,
+   "accepts": [
+    {
+     "scheme": "exact",
+     "network": "base",
+     "asset": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+     "amount": "10000",
+     "payTo": "0xcF9223eCe895258dEa8D288AEBcf846Ab8E342fB",
+     "maxTimeoutSeconds": 300,
+     "extra": {
+      "name": "USD Coin",
+      "version": "2",
+      "resource": "https://api.printmoneylab.com/api/v1/exchange-alerts"
+     },
+     "resource": "https://api.printmoneylab.com/api/v1/exchange-alerts",
+     "maxAmountRequired": "10000",
+     "description": "Korean exchange alerts: new listings, delistings, investment warnings, caution flags",
+     "mimeType": "application/json"
+    }
+   ]
+  }
+ },
+ {
+  "url": "https://api.myceliasignal.com/oracle/price/eur/usd",
+  "listedPrice": 0.01,
+  "livePrice": 0.01,
+  "drift": false,
+  "charged": 0,
+  "quotedVsCharged": "QUOTED $0.01, CHARGED NOTHING (no data returned either)",
+  "x402Version": 2,
+  "httpStatus": 402,
+  "bytes": 593,
+  "settled": false,
+  "receiptState": "NO RECEIPT HEADER",
+  "txHash": null,
+  "contractKind": "registry example object",
+  "declaredFields": [
+   "canonical:string",
+   "domain:string",
+   "pubkey:string",
+   "signature:string",
+   "signingScheme:string"
+  ],
+  "verdict": "VIOLATION",
+  "detail": "missing required: canonical, domain, pubkey, signature, signingScheme",
+  "extraKeys": [
+   "x402Version",
+   "accepts"
+  ],
+  "semantic": null,
+  "nesting": null,
+  "body": {
+   "x402Version": 1,
+   "accepts": [
+    {
+     "scheme": "exact",
+     "network": "base",
+     "amount": "10000",
+     "maxAmountRequired": "10000",
+     "resource": "https://api.myceliasignal.com/oracle/price/eur/usd",
+     "description": "EUR/USD forex exchange rate — real-time euro to US dollar for FX trading and settlement",
+     "mimeType": "application/json",
+     "payTo": "0xD593832Ce9C2B13B192ba50B55dd9AF44e96700d",
+     "recipient": "0xD593832Ce9C2B13B192ba50B55dd9AF44e96700d",
+     "asset": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+     "currency": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+     "maxTimeoutSeconds": 300,
+     "extra": {
+      "name": "USD Coin",
+      "version": "2"
+     }
+    }
+   ]
+  }
+ },
+ {
+  "url": "https://api.myceliasignal.com/oracle/price/cad/jpy",
+  "listedPrice": 0.01,
+  "livePrice": 0.01,
+  "drift": false,
+  "charged": null,
+  "quotedVsCharged": "charge unknown (RPC unavailable)",
+  "x402Version": 2,
+  "httpStatus": 402,
+  "bytes": 567,
+  "settled": false,
+  "receiptState": "NO RECEIPT HEADER",
+  "txHash": null,
+  "contractKind": "registry example object",
+  "declaredFields": [
+   "canonical:string",
+   "domain:string",
+   "pubkey:string",
+   "signature:string",
+   "signingScheme:string"
+  ],
+  "verdict": "VIOLATION",
+  "detail": "missing required: canonical, domain, pubkey, signature, signingScheme",
+  "extraKeys": [
+   "x402Version",
+   "accepts"
+  ],
+  "semantic": null,
+  "nesting": null,
+  "body": {
+   "x402Version": 1,
+   "accepts": [
+    {
+     "scheme": "exact",
+     "network": "base",
+     "amount": "10000",
+     "maxAmountRequired": "10000",
+     "resource": "https://api.myceliasignal.com/oracle/price/cad/jpy",
+     "description": "CAD/JPY forex exchange rate — Canadian dollar to Japanese yen",
+     "mimeType": "application/json",
+     "payTo": "0xD593832Ce9C2B13B192ba50B55dd9AF44e96700d",
+     "recipient": "0xD593832Ce9C2B13B192ba50B55dd9AF44e96700d",
+     "asset": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+     "currency": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+     "maxTimeoutSeconds": 300,
+     "extra": {
+      "name": "USD Coin",
+      "version": "2"
+     }
+    }
+   ]
+  }
+ },
+ {
+  "url": "https://api.macaroonnetwork.com/execute/polymathica-transaction-intelligence-v1",
+  "listedPrice": 0.015,
+  "livePrice": 0.015,
+  "drift": false,
+  "charged": 0,
+  "quotedVsCharged": "QUOTED $0.015, CHARGED NOTHING (no data returned either)",
+  "x402Version": 2,
+  "httpStatus": 402,
+  "bytes": 705,
+  "settled": false,
+  "receiptState": "NO RECEIPT HEADER",
+  "txHash": null,
+  "contractKind": "registry example object",
+  "declaredFields": [
+   "payload:object",
+   "predicate_passed:boolean",
+   "settled:boolean"
+  ],
+  "verdict": "VIOLATION",
+  "detail": "missing required: payload, predicate_passed, settled",
+  "extraKeys": [
+   "x402Version",
+   "accepts"
+  ],
+  "semantic": null,
+  "nesting": null,
+  "body": {
+   "x402Version": 1,
+   "accepts": [
+    {
+     "scheme": "exact",
+     "network": "base",
+     "amount": "15000",
+     "asset": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+     "payTo": "0x33cc8de6e86761d217044a8a6b394ad23b579596",
+     "maxTimeoutSeconds": 60,
+     "extra": {
+      "name": "USD Coin",
+      "version": "2"
+     },
+     "maxAmountRequired": "15000",
+     "resource": "https://api.macaroonnetwork.com/execute/polymathica-transaction-intelligence-v1",
+     "description": "Aggregate transaction patterns across this marketplace's payment rails -- volume, success rate, and task-state breakdowns by rail and time window. Aggregate only: no individual buyer's wallet address, transaction hash, Lightning node id, or payment record is ever included, by design.",
+     "mimeType": "application/json"
+    }
+   ]
+  }
+ },
+ {
+  "url": "https://orcpin.dev/v1/holding-period",
+  "listedPrice": 0.02,
+  "livePrice": 0.02,
+  "drift": false,
+  "charged": 0,
+  "quotedVsCharged": "QUOTED $0.02, CHARGED NOTHING (no data returned either)",
+  "x402Version": 2,
+  "httpStatus": 402,
+  "bytes": 836,
+  "settled": false,
+  "receiptState": "NO RECEIPT HEADER",
+  "txHash": null,
+  "contractKind": "registry example object",
+  "declaredFields": [
+   "as_of:string",
+   "disclaimer:string",
+   "explanation:string",
+   "lots:array",
+   "methodology:string",
+   "schema_version:string",
+   "sell:object",
+   "spec:string"
+  ],
+  "verdict": "VIOLATION",
+  "detail": "missing required: as_of, disclaimer, explanation, lots, methodology, schema_version, sell, spec",
+  "extraKeys": [
+   "x402Version",
+   "accepts"
+  ],
+  "semantic": null,
+  "nesting": null,
+  "body": {
+   "x402Version": 1,
+   "accepts": [
+    {
+     "scheme": "exact",
+     "network": "base",
+     "amount": "20000",
+     "asset": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+     "payTo": "0x8B1CF12e7efe6AEA59cD1124eBbe7709E3Ac6085",
+     "maxTimeoutSeconds": 300,
+     "extra": {
+      "name": "USD Coin",
+      "version": "2"
+     },
+     "maxAmountRequired": "20000",
+     "resource": "https://orcpin.dev/v1/holding-period",
+     "description": "Trade-lot holding-period and realized-gain calculator for trading agents: per-lot days held, the exact date each lot's gain character turns long-term, and FIFO / specific-identification allocation of a proposed sell with realized gain per lot and per-character totals. Deterministic arithmetic on caller-supplied lots with the published threshold cited (IRC §1222: held more than one year) — counts, dates, and dollars only, never advice. Nothing is stored.",
+     "mimeType": "application/json"
+    }
+   ]
+  }
+ }
+]

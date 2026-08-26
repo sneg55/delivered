@@ -1,0 +1,29 @@
+node_modules/
+
+
+# Never let a key or a funded wallet near this tree. The spending wallet lives in
+# ~/.orion-delivered/ and is deliberately outside the repo.
+wallet.json
+*.key
+*.pem
+.env
+.env.*
+secrets/
+
+# Local scratch
+*.log
+tmp/
+/cdp_all.json
+
+# generated run output
+targets.json
+
+.harness/
+evidence/unpaid.json
+
+# Submission working docs stay out of the public tree
+docs/SUBMISSION.md
+docs/submission-form-*.png
+site/evidence/
+docs/SPEC.md
+docs/CONTEXT.md

@@ -1,0 +1,66 @@
+{
+ "measuredAt": "2026-08-26",
+ "gatewayInfo": {
+  "url": "https://orionagents.org/api/x402/info",
+  "live": true,
+  "oracleAddress": "0x7cDd6Ea617c4F5F1c9a5128D2940c72e1A2E4900",
+  "contract": "0xb006ca09e390eb3082bb3cb0b43e788ebc6e76a0",
+  "standardAmount": "50000",
+  "discountedAmount": "20000",
+  "attestationHeader": "X-ORION-ATTESTATION",
+  "enabled": true
+ },
+ "attestationEndpoint": {
+  "url": "https://orionagents.org/api/x402/attestation/{agentId|wallet|slug}",
+  "probedKeys": [
+   "16",
+   "17",
+   "18",
+   "7",
+   "0x6ee495D415F5956fe0d72CB0118A52a04d3e33a3",
+   "basescout",
+   "rigel",
+   "audit",
+   "coinop"
+  ],
+  "resultForEvery": "No AgentBound reputation found for that agent id, wallet, or slug",
+  "note": "includes the three agentIds (16,17,18) minted and attested on-chain, and the owner wallet they were minted to; no caller can currently obtain the discounted rate"
+ },
+ "premiumEndpointPaidProbe": {
+  "url": "https://orionagents.org/api/x402/premium/agents/17/analytics",
+  "listedPrice": null,
+  "livePrice": 0.05,
+  "drift": false,
+  "payTo": "0x6ee495D415F5956fe0d72CB0118A52a04d3e33a3",
+  "quotedAtomic": "50000",
+  "x402Version": 2,
+  "contractKind": "none",
+  "declaredFields": [],
+  "charged": 0,
+  "quotedVsCharged": "QUOTED $0.05, CHARGED NOTHING",
+  "payloadVersion": 2,
+  "httpStatus": 500,
+  "bytes": 148,
+  "delivered": false,
+  "settled": false,
+  "receiptState": "NO RECEIPT HEADER",
+  "txHash": null,
+  "verdict": "NOT_DELIVERED",
+  "detail": "seller returned HTTP 500; no delivery to check against the contract",
+  "extraKeys": [],
+  "semantic": null,
+  "nesting": null,
+  "body": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Internal Server Error</pre>\n</body>\n</html>\n"
+ },
+ "paymentSignatureHeaderRetry": {
+  "httpStatus": 500,
+  "body": "Internal Server Error (default HTML error page)",
+  "charged": 0,
+  "note": "same result with the docs-preferred PAYMENT-SIGNATURE header name as with X-PAYMENT"
+ },
+ "settlementCheck": {
+  "window": "blocks 50483800 to latest",
+  "settlementsFromProbeWallet": 0,
+  "conclusion": "gateway did not charge on either failed attempt"
+ }
+}
