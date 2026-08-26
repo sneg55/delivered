@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Delivered — caller-observed delivery proof for paid x402 endpoints</title>
+<title>Delivered: caller-observed delivery proof for paid x402 endpoints</title>
 <meta name="description" content="Delivered pays x402 endpoints as a real buyer and checks the response against the contract the seller itself published. Every verdict ships with its settlement transaction.">
 <meta property="og:title" content="Delivered">
 <meta property="og:description" content="Of 29 paid responses checkable against their own seller's contract, 10 violated it. Measured on Base mainnet with real USDC.">
@@ -37,8 +37,8 @@
   <p class="eyebrow">Caller-observed delivery proof for paid x402 endpoints</p>
   <h1>Everyone measures the endpoint. Delivered measures <span class="money">the goods.</span></h1>
   <p class="lede">Registries count settlements. Monitors probe the paywall. Nobody checks what a paying
-  caller actually receives, because checking costs money. Delivered <strong>pays as a real buyer</strong>, then holds the
-  response against the contract <strong>the seller itself published</strong>. Every verdict below ships with the
+  caller actually receives, because checking costs money. Delivered pays as a real buyer, then holds the
+  response against the contract the seller itself published. Every verdict below ships with the
   challenge, the response, and the on-chain settlement that proves it.</p>
 
   <div class="exchange" aria-label="One real probe, reenacted">
@@ -96,7 +96,7 @@ delivered before the goods.</span></pre>
 
 <section id="ledger">
   <p class="eyebrow">The ledger</p>
-  <h2>Every probe, every verdict, every receipt</h2>
+  <h2>Every probe, with its receipt</h2>
   <p class="sec-lede">Each row expands to the seller's declared contract, what came back, what was quoted
   against what actually settled, and the settlement transaction on Basescan. Verdicts follow one rule:
   only an HTTP 200 can be judged against a contract; a payment our client could not complete is our
@@ -118,9 +118,9 @@ delivered before the goods.</span></pre>
     <div class="finding"><span class="tag VIOLATION">PAID, NOT DELIVERED</span>
       <h3>Two endpoints settled and returned nothing</h3>
       <p>One took <a href="https://basescan.org/tx/0x7bad35035f575f00f5a6504436d680c2ab795c77b33327256ed722077c2dd632">$0.100 with a settlement receipt</a>,
-      then answered HTTP 422. Another settled $0.001 and answered HTTP 500. The money moved; nothing came
-      back; x402 has no recovery path. Other sellers hit with the same bad input refused without charging,
-      so the correct behaviour exists. It is not universal.</p>
+      then answered HTTP 422. Another settled $0.001 and answered HTTP 500. The money moved and nothing
+      came back, with no recovery path in the protocol. Other sellers hit with the same bad input refused
+      without charging, so the correct behaviour exists. It is not universal.</p>
     </div>
     <div class="finding"><span class="tag UNCHECKABLE">CLIENT SIDE</span>
       <h3>The buyer's toolchain is broken too</h3>
@@ -131,9 +131,9 @@ delivered before the goods.</span></pre>
     </div>
     <div class="finding"><span class="tag CONFORMS">QUOTES</span>
       <h3>What you are charged is not what you were quoted</h3>
-      <p>Settled amounts drift from listed prices; some sellers deliver and charge nothing; a caller-side
-      ledger built from quoted prices misses reality badly. Delivered records quoted, live,
-      and settled amounts as three separate fields and trusts only the transfer log.</p>
+      <p>Settled amounts drift from listed prices, and some sellers deliver and charge nothing, so a
+      ledger built from quoted prices does not reconcile against the wallet. Delivered records quoted,
+      live, and settled amounts as three separate fields and trusts only the transfer log.</p>
     </div>
   </div>
 </section>
@@ -154,7 +154,7 @@ delivered before the goods.</span></pre>
       <li>It charged nothing either time, verified against the transfer log. Correct refusal behaviour,
       credited as such.</li>
     </ul>
-    <p>A contract violation is a mismatch, never an accusation. Full evidence in
+    <p>Delivered reports the mismatch and makes no accusation. Full evidence in
     <a href="https://github.com/sneg55/delivered/blob/main/evidence/orion-gateway-2026-08-26.json">evidence/orion-gateway-2026-08-26.json</a>.</p>
   </div>
 </section>
