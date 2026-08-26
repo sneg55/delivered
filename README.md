@@ -33,11 +33,11 @@ did not.** Denominator 29, from 46 paid attempts: 33 returned a response, and 4 
 published no contract to check. $1.29 of real USDC across three runs, every settlement reconciled
 against the token transfer log.
 
-Nine of the ten violations are one bug: the declared fields exist but sit below the declared path,
-under a wrapper envelope. Two endpoints took payment and returned no data at all. And the client
-side is measurably broken too: the official x402 library cannot pay v2 sellers at all, and a v2
-payload under the legacy `X-PAYMENT` header name is rejected by 13 of 46; this client
-sends both header names and reaches all but one.
+One bug accounts for nine of the ten violations: the declared fields exist but sit below the
+declared path, under a wrapper envelope. The wallet also caught two endpoints that took payment
+and returned no data at all. And the client side is measurably broken too: the official x402
+library cannot pay v2 sellers at all, and a v2 payload under the legacy `X-PAYMENT` header name
+is rejected by 13 of 46; this client sends both header names and reaches all but one.
 
 See `docs/PAID-PROOF.md` for the full measurement log and its stated limits, and
 [delivered-f0d.pages.dev](https://delivered-f0d.pages.dev) for the browsable evidence ledger.
@@ -78,8 +78,8 @@ The reconcile step is not optional if you intend to quote a cost. The probe's ow
 a balance delta read at response time, and settlement is asynchronous, so it under-counts. The
 probe prints the block range and the exact reconcile command to run when it finishes.
 
-Only the last line spends money, and only it needs a wallet. Everything above it runs from a
-fresh clone with no key present.
+Only the probe line spends money. It and the reconcile step are the only ones that read the
+wallet file; everything above them runs from a fresh clone with no key present.
 
 The registry path is `./cdp_all.json` by default and is overridable with `X402_REGISTRY`. It is
 gitignored at ~50 MB. The spending wallet lives at `~/.orion-delivered/wallet.json`, outside this
